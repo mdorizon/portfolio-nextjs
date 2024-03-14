@@ -76,6 +76,22 @@
   right: -25px;
   animation: floatVscode 3s ease-in-out infinite alternate;
 }
+.figma-icon {
+  width: 30px;
+  height: 45px;
+}
+.tailwind-icon {
+  width: 51px;
+  height: 30px;
+}
+.sass-icon {
+  width: 54px;
+  height: 40px;
+}
+.vscode-icon {
+  width: 24px;
+  height: 24px;
+}
 @keyframes floatFigma {
   from {
     transform: translate(0, 0);
@@ -194,12 +210,6 @@
     border-radius: 26px;
     border: 2.5px solid var(--color-light);
     transition: 0.3s all ease-out;
-  }
-  img {
-    width: 22px;
-  }
-  i {
-    font-size: 32px;
   }
   div:hover {
     opacity: 0.6;
