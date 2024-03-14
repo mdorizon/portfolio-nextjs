@@ -1,6 +1,6 @@
 'use client';
 
-import Image from "next/image";
+import { IconMenu2 } from "@tabler/icons-react";
 
 export default function Navigation() {
 
@@ -30,7 +30,7 @@ export default function Navigation() {
             </div>
           </div>
           <a id="openBtn" className="burger-icon">
-            <Image src="/icons/burger-menu.svg" width={24} height={24} alt="burger" />
+            <IconMenu2 />
           </a>
         </div>
       </nav>

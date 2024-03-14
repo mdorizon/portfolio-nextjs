@@ -76,22 +76,6 @@
   right: -25px;
   animation: floatVscode 3s ease-in-out infinite alternate;
 }
-.figma-icon {
-  width: 30px;
-  height: 45px;
-}
-.tailwind-icon {
-  width: 51px;
-  height: 30px;
-}
-.sass-icon {
-  width: 54px;
-  height: 40px;
-}
-.vscode-icon {
-  width: 24px;
-  height: 24px;
-}
 @keyframes floatFigma {
   from {
     transform: translate(0, 0);
@@ -190,8 +174,7 @@
   user-select: none;
 }
 .arrow {
-  width: 16px;
-  height: 38px;
+  padding: 10px 20px;
   transition: 0.3s all ease-out;
   animation: arrow 1s ease-in-out infinite alternate;
 }

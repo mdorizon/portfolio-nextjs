@@ -1,5 +1,8 @@
 'use client';
 
+import { IconBrandGithub, IconBrandDribbble, IconBrandLinkedin, IconDownload } from '@tabler/icons-react';
+import Image from 'next/image';
+
 export default function Banner() {
 
   return (
@@ -12,7 +15,7 @@ export default function Banner() {
                 <h2>Hey, je suis Maxence DORIZON</h2>
                 <h1>Développeur front-end</h1>
               </div>
-              <p>Bienvenue sur mon portfolio ! Je suis Maxence Dorizon, un passionné de 19 ans en première année de développement web à l'École Supérieure du Digital (ESD) de Bordeaux. Explorez mon portfolio pour découvrir mon parcours et mes projets.</p>
+              <p>Bienvenue sur mon portfolio ! Je suis Maxence Dorizon, un passionné de 19 ans en première année de développement web à l&#39;École Supérieure du Digital (ESD) de Bordeaux. Explorez mon portfolio pour découvrir mon parcours et mes projets.</p>
             </div>
             <div className="header-buttons flex align-center">
               <a href="#contact">
@@ -20,10 +23,10 @@ export default function Banner() {
                   <p>Contactez moi</p>
                 </div>
               </a>
-              <a href="./src/file/CV.pdf" download>
+              <a href="/documents/CV.pdf" download>
                 <div className="cv-download flex align-center">
                   <p>télécharger CV</p>
-                  <i className="ti ti-download"></i>
+                  <IconDownload />
                 </div>
               </a>
             </div>
@@ -32,39 +35,39 @@ export default function Banner() {
                 <div className="buttons flex align-center">
                   <a href="https://www.linkedin.com/in/mdorizon/" target="_blank">
                     <div className="linkedin-button flex justify-center align-center">
-                      <img src="/icons/linkedin.svg"></img>
+                      <IconBrandLinkedin size={30} stroke={1.8} />
                     </div>
                   </a>
                   <a href="https://github.com/mdorizon" target="_blank">
                     <div className="github-button flex justify-center align-center">
-                      <i className="ti ti-brand-github"></i>
+                      <IconBrandGithub size={30} stroke={1.8} />
                     </div>
                   </a>
                   <a href="https://dribbble.com/wakusay" target="_blank">
                     <div className="dribbble-button flex justify-center align-center">
-                      <i className="ti ti-brand-dribbble"></i>
+                      <IconBrandDribbble size={30} stroke={1.8} />
                     </div>
                   </a>
                 </div>
                 <a href="#whoami">
-                  <img src="/icons/arrow.svg" className="arrow"></img>
+                  <Image src="/icons/arrow.svg" height={38} width={16} className="arrow" alt='scroll arrow' />
                 </a>
               </div>
             </div>
           </div>
           <div className="right-content">
-            <img src="/images/logo.jpg" alt="header-logo" className="header-logo" />
+            <Image src="/images/logo.jpg" alt="header-logo" className="header-logo" width={400} height={400} />
             <div className="logo-figma flex justify-center align-center">
-              <img src="/icons/figma-icon.svg" alt="figma-icon" className="figma-icon" />
+              <Image src="/icons/figma-icon.svg" alt="figma-icon" className="figma-icon" width={30} height={45} />
             </div>
             <div className="logo-tailwind flex justify-center align-center">
-              <img src="/icons/tailwind-icon.svg" alt="tailwind-icon" className="tailwind-icon" />
+              <Image src="/icons/tailwind-icon.svg" alt="tailwind-icon" className="tailwind-icon" width={51} height={30} />
             </div>
             <div className="logo-vscode flex justify-center align-center">
-              <img src="/icons/vscode-icon.svg" alt="vscode-icon" className="vscode-icon" />
+              <Image src="/icons/vscode-icon.svg" alt="vscode-icon" className="vscode-icon" width={24} height={24} />
             </div>
             <div className="logo-sass flex justify-center align-center">
-              <img src="/icons/sass-icon.svg" alt="sass-icon" className="sass-icon" />
+              <Image src="/icons/sass-icon.svg" alt="sass-icon" className="sass-icon" width={54} height={40} />
             </div>
           </div>
         </div>
