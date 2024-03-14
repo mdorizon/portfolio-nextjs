@@ -1,0 +1,33 @@
+.skills-container {
+  max-width: 1200px;
+  width: 100%;
+  gap: 24px;
+  .skills-title {
+    color: var(--color-secondary);
+    font-size: var(--font-size-h3);
+    font-weight: 700;
+  }
+}
+.skills-cards {
+  gap: 24px;
+  width: 100%;
+  .skill-card {
+    width: 100%;
+  }
+  .skill-content {
+    gap: 16px;
+    h3 {
+      opacity: 0.8;
+    }
+    hr {
+      margin: 0;
+      opacity: 0.6;
+      width: 100%;
+    }
+    ul {
+      margin: 0;
+      opacity: 0.6;
+      padding-left: 17px;
+    }
+  }
+}

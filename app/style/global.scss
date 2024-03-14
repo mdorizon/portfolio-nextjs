@@ -1,0 +1,565 @@
+// @import 'components/whoami', 'components/project', 'components/skills' , 'components/footer';
+@import 'components/header', 'layout/grid.scss', 'utils/colors.scss';
+
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+// RESET
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+h1, h2, h3, p, a {
+  margin: 0;
+}
+body {
+  background-color: var(--color-background);
+  font-family: Poppins;
+  color: var(--color-light);
+  gap: 128px;
+}
+main {
+  gap: 128px;
+}
+a {
+  all: unset;
+  cursor: pointer;
+}
+.text-copy {
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.text-copy:hover {
+  opacity: 0.6;
+}
+.tel-hover {
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.tel-hover:hover {
+  opacity: 0.6;
+}
+.d-none {
+  display: none;
+}
+// RESET END
+
+// SCROLLBAR
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-grey-secondary); 
+}
+// SCROLLBAR END
+
+// Laptop responsive
+@media only screen and (max-width: 1440px){
+  body {
+    gap: 96px;
+  }
+  .container {
+    flex-direction: column-reverse;
+    max-width: 700px;
+    .left-content {
+      align-items: center;
+      text-align: center;
+    }
+  }
+  .header-logo {
+    width: 350px;
+    height: 350px;
+  }
+  .nav-items a {
+    font-size: 0.625rem;
+  }
+  .figma-icon {
+    width: 20px;
+    height: 35px;
+  }
+  .sass-icon {
+    width: 44px;
+    height: 30px;
+  }
+  .tailwind-icon {
+    width: 39px;
+    height: 20px;
+  }
+  .vscode-icon {
+    width: 14px;
+    height: 14px;
+  }
+  .logo-figma, .logo-tailwind, .logo-sass {
+    width: 60px;
+    height: 60px;
+  }
+  .logo-vscode {
+    width: 29px;
+    height: 29px;
+    bottom: 26px;
+    right: -10px;
+  }
+  .title-container {
+    h1 {
+      font-size: 2.125rem;
+    }
+    h2 {
+      font-size: 1.375rem;
+    }   
+  }
+  .header-text {
+    p {
+      font-size: 0.625rem;
+      line-height: 16px;
+    }
+  }
+  .header-buttons {
+    .contact-me-button {
+      padding: 15px 25px;
+      p {
+        font-size: 0.875rem;
+      }
+    }
+    .cv-download {
+      padding: 15px 25px;
+      p, i {
+        font-size: 0.625rem;
+      }
+    }
+  }
+  .social-buttons {
+    .linkedin-button {
+      width: 35px;
+      height: 35px;
+      img {
+        width: 13px;
+      }
+    }
+    .github-button {
+      width: 35px;
+      height: 35px;
+      i {
+        font-size: 22px;
+      }
+    }
+    .dribbble-button {
+      width: 35px;
+      height: 35px;
+      i {
+        font-size: 22px;
+      }
+    }
+    .arrow {
+      width: 11px;
+      height: 32px;
+    }
+  }
+  .whoami-text {
+    max-width: 700px;
+    h3 {
+      font-size: 1.125rem;
+    }
+    p {
+      font-size: 0.625rem;
+      line-height: 20px;
+    }
+  }
+  .cards-container {
+    max-width: 700px;
+  }
+  .sort-buttons {
+    gap: 12px;
+    .sort-button {
+      padding: 6px 12px;
+      p {
+        font-size: 0.625rem;
+      }
+    }
+  }
+  .cards {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 24px 24px; 
+    .card {
+      .card-content {
+        gap: 20px;
+        h3 {
+          font-size: 1rem;
+        }
+        p {
+          font-size: 0.625rem;
+        }
+        .skill .skill-content {
+          img {
+            width: 14px;
+          }
+          p {
+            font-size: 0.625rem;
+          }
+        }
+      }
+      .card-links-container {
+        .project-button {
+          padding: 8px;
+          img {
+            width: 16px;
+          }
+        }
+        .more-button {
+          padding: 8px 12px;
+        }
+      }
+      .category-tag {
+        p {
+          font-size: 0.625rem;
+        }
+      }
+    }
+  }
+  .skills-container {
+    max-width: 700px;
+    .skills-title {
+      font-size: 1.125rem;
+    }
+    .skills-cards {
+      .skill-content {
+        h3 {
+          font-size: 1.125rem;
+        }
+      }
+    }
+  }
+  footer {
+    .contact-container {
+      h3 {
+        font-size: 1.125rem;
+      }
+      h1 {
+        font-size: 2rem;
+      }
+    }
+    .footer-links {
+      padding: 22px 34px;
+      .social-buttons {
+        padding-top: 22px;
+      }
+      .infos p {
+        font-size: 12px;
+      }
+      .footer-container .nav-items {
+        gap: 16px;
+      }
+    }
+  }
+}
+// Laptop responsive END
+
+// Tablet responsive
+@media only screen and (max-width: 768px){
+  body, main {
+    gap: 48px;
+  }
+  .nav-item {
+    display: none;
+  }
+  .burger-icon {
+    display: unset;
+  }
+  .navbar {
+    justify-content: flex-end;
+    width: 100%;
+    .nav-items {
+      padding: var(--space-md);
+    }
+  }
+  .burger-nav-items {
+    .burger-nav-item {
+      font-size: 0.875rem;
+    }
+  }
+  .header-content {
+    padding: var(--space-8xl) 0;
+    .container {
+      max-width: 100%;
+      width: 100%;
+      .right-content {
+        .header-logo {
+          width: 250px;
+          height: 250px;
+          box-shadow: 0px 17px 25px 19px rgba(82, 96, 255, 0.10)
+        }
+        .logo-figma, .logo-sass, .logo-tailwind {
+          width: 40px;
+          height: 40px;
+          .figma-icon {
+            width: 15px;
+            height: 30px;
+          }
+          .sass-icon {
+            width: 34px;
+            height: 20px;
+          }
+          .tailwind-icon {
+            width: 34px;
+            height: 15px;
+          }
+        }
+        .logo-figma {
+          animation: floatFigma 2.5s ease-in-out infinite alternate;
+        }
+        .logo-sass {
+          animation: floatSass 3s ease-in-out infinite alternate;
+        }
+        .logo-tailwind {
+          animation: floatTailwind 3.5s ease-in-out infinite alternate;
+        }
+        .logo-vscode {
+          width: 19px;
+          height: 19px;
+          bottom: 33px;
+          right: -3px;
+          animation: floatVscode 3.5s ease-in-out infinite alternate;
+          .vscode-icon {
+            width: 9px;
+            height: 9px;
+          }
+        }
+      }
+      .left-content {
+        gap: 40px;
+        .title-container {
+          h2 {
+            font-size: 1.125rem;
+          }
+          h1 {
+            font-size: 1.625rem;
+          }
+        }
+        .header-text p {
+          font-size: 0.5rem;
+          padding: 0 16px;
+        }
+        .header-buttons {
+          gap: 30px;
+          .contact-me-button {
+            padding: 10px 20px;
+            border-radius: 8px;
+            p {
+              font-size: 0.625rem;
+            }
+          }
+          .cv-download {
+            padding: 10px 20px;
+          }
+        }
+      }
+    }
+  }
+  @keyframes floatFigma {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(-4px, 4px);
+    }
+  }
+  @keyframes floatTailwind {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(4px, 4px);
+    }
+  }
+  @keyframes floatSass {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(4px, -4px);
+    }
+  }
+  @keyframes floatVscode {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(3px, 9px);
+    }
+  }
+  .arrow {
+    animation: arrow 1.5s ease-in-out infinite alternate;
+  }
+  @keyframes arrow {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(20px);
+    }
+  }
+  .social-buttons {
+    .buttons {
+      gap: 12px;
+    }
+    gap: 16px;
+    .linkedin-button {
+      width: 25px;
+      height: 25px;
+      border: 1.5px solid var(--color-light);
+      img {
+        width: 10px;
+      }
+    }
+    .github-button {
+      width: 25px;
+      height: 25px;
+      border: 1.5px solid var(--color-light);
+      i {
+        font-size: 16px;
+      }
+    }
+    .dribbble-button {
+      width: 25px;
+      height: 25px;
+      border: 1.5px solid var(--color-light);
+      i {
+        font-size: 16px;
+      }
+    }
+    .arrow {
+      width: 11px;
+      height: 26px;
+    }
+  }
+  .whoami-section {
+    gap: 64px;
+    .whoami-text {
+      max-width: 100%;
+      padding: 0 16px;
+      h3 {
+        font-size: 1rem;
+      }
+      p {
+        font-size: 0.5rem;
+      }
+    }
+  }
+  .projects-section {
+    margin: 0 32px;
+    .cards-container {
+      max-width: 100%;
+      align-items: center;
+      .sort-buttons {
+        gap: 8px;
+        .sort-button {
+          padding: 4px 10px;
+          p {
+            font-size: 0.5rem;
+          }
+        }
+      }
+      .cards {
+        grid-template-columns: 1fr; 
+        grid-template-rows: 1fr 1fr 1fr; 
+        gap: 24px 24px;
+        .card {
+          max-width: 370px;
+          .card-image {
+            max-height: 200px;
+            min-height: 200px;
+          }
+          .category-tag {
+            padding: 3px 10px;
+            top: 177px;
+          }
+          .card-content {
+            gap: 16px;
+            padding: 24px 16px 16px 22px;
+            .card-buttons-container {
+              gap: 12px;
+            }
+            .card-skills-container .skill {
+              padding: 6px 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .skills-container {
+    .skills-title {
+      font-size: 1rem;
+    }
+    .skills-cards {
+      gap: 16px;
+      .skill-card {
+        .skill-content {
+          gap: 12px;
+          h3 {
+            font-size: 0.875rem;
+          }
+          li {
+            font-size: 0.625rem;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    gap: 48px;
+    .contact-container {
+      h3 {
+        font-size: 0.875rem;
+      }
+      h1 {
+        font-size: 1.375rem;
+      }
+    }
+    .footer-links {
+      padding: 14px 18px;
+      .footer-container {
+        max-width: 100%;
+        .nav-items {
+          gap: 12px;
+          padding: 16px 0px;
+          a {
+            font-size: 0.5rem;
+          }
+        }
+        .infos {
+          gap: 8px;
+          p {
+            font-size: 8px;
+          }
+          .social-buttons {
+            padding-top: 16px;
+            .buttons {
+              gap: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+// Tablet responsive END

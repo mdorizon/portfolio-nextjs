@@ -1,0 +1,260 @@
+.header-content {
+  padding: var(--space-13xl) 0px;
+}
+.container {
+  max-width: var(--space-sectionSmallMaxWidth);
+  gap: var(--space-13xl);
+}
+.nav-items {
+  padding: var(--space-4xl) 0;
+  gap: var(--space-4xl);
+  a {
+    font-size: var(--font-size-text);
+    font-weight: 600;
+  }
+  p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  p:after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-light);
+    transition: 0.3s all ease-in-out;
+    opacity: 0.8;
+    border-radius: 10px;
+  }
+  a:hover {
+    p:after {
+      width: 100%;
+    }
+  }
+}
+.header-logo {
+  width: 400px;
+  height: 400px;
+  border-radius: 400px;
+  box-shadow: 0px 27px 75px 29px rgba(82, 96, 255, 0.22);
+  user-select: none;
+}
+.right-content {
+  position: relative;
+}
+.logo-figma,
+.logo-tailwind,
+.logo-sass,
+.logo-vscode {
+  background-color: #FFF;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 56px;
+  width: 85px;
+  height: 85px;
+  position: absolute;
+  user-select: none;
+}
+.logo-figma {
+  bottom: 39px;
+  left: -10px;
+  animation: floatFigma 2s ease-in-out infinite alternate;
+}
+.logo-tailwind {
+  bottom: 51px;
+  right: 5px;
+  animation: floatTailwind 3s ease-in-out infinite alternate;
+}
+.logo-sass {
+  top: -34px;
+  right: 82px;
+  animation: floatSass 2.5s ease-in-out infinite alternate;
+}
+.logo-vscode {
+  width: 49px;
+  height: 49px;
+  bottom: 11px;
+  right: -25px;
+  animation: floatVscode 3s ease-in-out infinite alternate;
+}
+.figma-icon {
+  width: 30px;
+  height: 45px;
+}
+.tailwind-icon {
+  width: 51px;
+  height: 30px;
+}
+.sass-icon {
+  width: 54px;
+  height: 40px;
+}
+.vscode-icon {
+  width: 24px;
+  height: 24px;
+}
+@keyframes floatFigma {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(-5px, 5px);
+  }
+}
+@keyframes floatTailwind {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(5px, 5px);
+  }
+}
+@keyframes floatSass {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(5px, -5px);
+  }
+}
+@keyframes floatVscode {
+  from {
+    transform: translate(0, 0);
+  }
+  to {
+    transform: translate(5px, 12px);
+  }
+}
+.left-content {
+  gap: 80px;
+}
+.title-container {
+  h2 {
+    color: var(--color-secondary);
+    font-size: var(--font-size-h2);
+    font-weight: 600;
+  }
+  h1 {
+    font-size: var(--font-size-h1);
+    font-weight: 600;
+  }
+}
+.header-text {
+  gap: 15px;
+  p {
+    font-size: var(--font-size-text);
+    font-weight: 300;
+    line-height: 28px;
+    opacity: 0.5;
+  }
+}
+.header-buttons {
+  gap: 40px;
+  .contact-me-button {
+    border-radius: 16px;
+    padding: 20px 30px;
+    cursor: pointer;
+    user-select: none;
+    background: var(--color-primary);
+    transition: 0.3s all ease-in-out;
+    p {
+      font-size: var(--font-size-button);
+      font-weight: 600;
+    }
+  }
+  .contact-me-button:hover {
+    background: hsl(235, 98%, 69%);
+  }
+  .cv-download {
+    padding: 20px 30px;
+    gap: 16px;
+    cursor: pointer;
+    user-select: none;
+    p {
+      font-size: var(--font-size-button);
+      font-weight: 600;
+      transition: all 0.3s ease-in-out;
+    }
+    i {
+      font-size: 18px;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  .cv-download:hover {
+    p, i {
+      opacity: 0.6;
+    }
+  }
+}
+.social-buttons {
+  gap: 32px;
+  user-select: none;
+}
+.arrow {
+  width: 16px;
+  height: 38px;
+  transition: 0.3s all ease-out;
+  animation: arrow 1s ease-in-out infinite alternate;
+}
+@keyframes arrow {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(30px);
+  }
+}
+.buttons {
+  gap: 20px;
+  div {
+    width: 45px;
+    height: 45px;
+    border-radius: 26px;
+    border: 2.5px solid var(--color-light);
+    transition: 0.3s all ease-out;
+  }
+  img {
+    width: 22px;
+  }
+  i {
+    font-size: 32px;
+  }
+  div:hover {
+    opacity: 0.6;
+  }
+}
+.burger-icon {
+  display: none;
+  height: 24px;
+}
+.sidenav {
+  height: fit-content;
+  width: 200px;
+  border-radius: 0 0 10px 0;
+  position: fixed;
+  z-index: 1000;
+  opacity: 0.8;
+  top: 0;
+  left: -250px;
+  background-color: var(--color-grey-primary);
+  padding-top: 60px;
+  transition: left 0.5s ease;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  color: var(--color-light);
+  display: block;
+  transition: 0.3s;
+  margin-bottom: 16px;
+}
+.sidenav.active {
+  top: 0;
+  left: 0;
+}
+.sidenav .close {
+  position: absolute;
+  top: -8px;
+  right: 6px;
+  font-size: 36px;
+}

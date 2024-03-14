@@ -1,0 +1,179 @@
+.cards-container {
+  max-width: var(--space-sectionSmallMaxWidth);
+  width: 100%;
+  gap: 32px;
+  align-items: start;
+}
+.sort-buttons {
+  gap: 19px;
+  .sort-button {
+    padding: 8px 14px;
+    cursor: pointer;
+    border-radius: 40px;
+    background-color: var(--color-grey-primary);
+    user-select: none;
+    transition: all 0.3s ease-in-out;
+    p {
+      font-size: var(--font-size-text);
+      font-weight: 600;
+    }
+  }
+  .active {
+    background-color: var(--color-grey-secondary);
+  }
+  .sort-button:hover{
+    background-color: var(--color-grey-secondary);
+  }
+}
+.cards {
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-rows: 1fr; 
+  gap: 24px 24px; 
+}
+#travee {
+  .card-image {
+    background-image: url(../../src/images/travee.png);
+  }
+}
+#foodies {
+  .card-image {
+    background-image: url(../../src/images/foodies.png);
+  }
+}
+#real_customer {
+  .card-image {
+    background-image: url(../../src/images/real_customer.png);
+  }
+}
+#portfolio {
+  .card-image {
+    background-image: url(../../src/images/portfolio.png);
+    background-position: bottom;
+  }
+}
+#music-dashboard {
+  .card-image {
+    background-image: url(../../src/images/Music-Dashboard.png);
+  }
+}
+#vanezia {
+  .card-image {
+    background-image: url(../../src/images/vanezia.png);
+    background-position: bottom;
+  }
+}
+#forum-php {
+  .card-image {
+    background-image: url(../../src/images/forum-php.png);
+    background-position: bottom;
+  }
+}
+.card {
+  min-width: 270px;
+  gap: -12px;
+  position: relative;
+  .card-image {
+    border-radius: 12px 12px 0 0;
+    max-height: 270px;
+    min-height: 270px;
+    width: 100%;
+    z-index: 1;
+    user-select: none;
+    background-size: cover;
+  }
+  .card-content {
+    height: 100%;
+    padding: 32px 24px 24px 24px;
+    gap: 24px;
+    border-radius: 12px;
+    z-index: 2;
+    margin-top: -12px;
+    background: var(--color-grey-primary);
+    .card-buttons-container {
+      display: flex;
+      width: 100%;
+      gap: 16px;
+      flex-direction: column;
+    }
+    .card-title-container {
+      gap: 8px;
+      h3 {
+        font-size: var(--font-size-card-title);
+        font-weight: 700;
+      }
+      p {
+        opacity: 0.7;
+        font-size: var(--font-size-card-content);
+        font-weight: 300;
+      }
+    }
+    .card-skills-container {
+      gap: 8px;
+      .skill {
+        gap: 12px;
+        padding: 8px 12px;
+        border-radius: 40px;
+        background: var(--color-grey-secondary);
+        user-select: none;
+        .skill-content {
+          gap: 8px;
+          p {
+            font-size: var(--font-size-tag);
+            font-weight: 500;
+            line-height: 0px;
+          }
+        }
+      }
+    }
+    hr {
+      width: 100%;
+      opacity: 0.09;
+    }
+    .card-links-container {
+      width: 100%;
+      .project-button {
+        padding: 12px;
+        border-radius: 40px;
+        background: var(--color-grey-secondary);
+        cursor: pointer;
+        user-select: none;
+        transition: all 0.3s ease-in-out;
+      }
+      .project-button:hover {
+        opacity: 0.7;
+      }
+      .more-button {
+        padding: 8px 16px;
+        border-radius: 40px;
+        background: var(--color-primary);
+        cursor: pointer;
+        user-select: none;
+        width: 80px;
+        transition: all 0.3s ease-in-out;
+        p {
+          font-weight: 600;
+        }
+      }
+      .more-button:hover {
+        width: 100px;
+      }
+    }
+  }
+  .category-tag {
+    padding: 4px 12px;
+    border-radius: 40px;
+    border: 4px solid var(--color-grey-primary);
+    background: var(--color-tag);
+    position: absolute;
+    user-select: none;
+    top: 245px;
+    left: 16px;
+    z-index: 3;
+    p {
+      color: var(--color-tag-text);
+      font-size: var(--font-size-tag);
+      font-weight: 600;
+    }
+  }
+}
