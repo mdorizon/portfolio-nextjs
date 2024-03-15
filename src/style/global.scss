@@ -1,74 +1,14 @@
-@import 'components/header', 'layout/grid.scss', 'utils/colors.scss', 'components/whoami', 'components/skills', 'components/footer', 'components/project';
+@import 
+'sections/header',
+'layout/grid.scss',
+'utils/colors.scss',
+'sections/whoami',
+'sections/skills',
+'sections/footer',
+'sections/project',
+'utils/reset',
+'utils/scrollbar';
 
-input[type='number'] {
-  -moz-appearance: textfield;
-  appearance: textfield;
-}
-
-input[type='number']::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-input[type='number']::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-// RESET
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-h1, h2, h3, p, a {
-  margin: 0;
-}
-body {
-  background-color: var(--color-background);
-  font-family: Poppins;
-  color: var(--color-light);
-  gap: 128px;
-}
-main {
-  gap: 128px;
-}
-a {
-  all: unset;
-  cursor: pointer;
-}
-.text-copy {
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-}
-.text-copy:hover {
-  opacity: 0.6;
-}
-.tel-hover {
-  cursor: pointer;
-  transition: all 0.3s ease-out;
-}
-.tel-hover:hover {
-  opacity: 0.6;
-}
-.d-none {
-  display: none;
-}
-// RESET END
-
-// SCROLLBAR
-::-webkit-scrollbar {
-  width: 5px;
-}
-::-webkit-scrollbar-track {
-  background: var(--color-background);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--color-grey-secondary); 
-}
-// SCROLLBAR END
 
 // Laptop responsive
 @media only screen and (max-width: 1440px){

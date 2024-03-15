@@ -1,0 +1,39 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+h1, h2, h3, p, a {
+  margin: 0;
+}
+body {
+  background-color: var(--color-background);
+  color: var(--color-light);
+  gap: 128px;
+}
+main {
+  gap: 128px;
+}
+a {
+  all: unset;
+  cursor: pointer;
+}
+.text-copy {
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.text-copy:hover {
+  opacity: 0.6;
+}
+.tel-hover {
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.tel-hover:hover {
+  opacity: 0.6;
+}
+.d-none {
+  display: none;
+}

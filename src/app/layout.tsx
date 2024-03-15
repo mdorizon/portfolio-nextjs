@@ -1,5 +1,5 @@
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { poppins } from '@/src/style/fonts';
+import { poppins } from '@/src/style/utils/fonts';
 import '@/src/style/global.scss';
 import { Metadata } from 'next';
  

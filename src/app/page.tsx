@@ -1,8 +1,8 @@
-import Footer from "../components/footer";
-import Header from "../components/1_header/header";
-import Whoami from "../components/whoami_section";
-import Projects from "../components/projects_section";
-import Skills from "../components/skills_section";
+import Footer from "../components/sections/footer";
+import Header from "../components/sections/header";
+import Whoami from "../components/sections/whoami_section";
+import Projects from "../components/sections/projects_section";
+import Skills from "../components/sections/skills_section";
 
 
 export default function Page() {

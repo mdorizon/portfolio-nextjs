@@ -1,6 +1,6 @@
 'use client';
 
-import SocialsContainer from "./socials_container";
+import SocialsContainer from "../socials_container";
 
 export default function Footer() {
 
