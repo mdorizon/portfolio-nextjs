@@ -1,5 +1,6 @@
 import '@/app/style/global.scss';
 import { inter } from '@/app/ui/fonts';
+import Script from 'next/script'
 
 import { Metadata } from 'next';
 import { SpeedInsights } from "@vercel/speed-insights/next"
@@ -21,8 +22,9 @@ export default function RootLayout({
       <SpeedInsights />
       <body className={`${inter.className} antialiased`}>
         <Header />
-        {/* {children} */}
+        {children}
         <Footer />
+        <Script src="/script.js" />
       </body>
     </html>
   );

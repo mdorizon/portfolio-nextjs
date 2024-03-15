@@ -1,5 +1,4 @@
-// @import 'components/whoami', 'components/project', 'components/skills' , 'components/footer';
-@import 'components/header', 'layout/grid.scss', 'utils/colors.scss';
+@import 'components/header', 'layout/grid.scss', 'utils/colors.scss', 'components/whoami', 'components/skills', 'components/footer', 'components/project';
 
 input[type='number'] {
   -moz-appearance: textfield;
