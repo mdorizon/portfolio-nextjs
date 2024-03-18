@@ -1,13 +1,14 @@
 @import 
 'sections/header',
-'layout/grid.scss',
-'utils/colors.scss',
+'layout/grid',
+'utils/colors',
 'sections/whoami',
 'sections/skills',
 'sections/footer',
 'sections/project',
 'utils/reset',
-'utils/scrollbar';
+'utils/scrollbar',
+'components/socials_container';
 
 
 // Laptop responsive

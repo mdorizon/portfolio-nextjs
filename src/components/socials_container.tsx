@@ -7,7 +7,7 @@ const SocialsContainer = ({ hasScrollDown } : { hasScrollDown: boolean }) => {
 
   return (
     <>
-      <div className="header-socials flex align-start">
+      <div className="socials flex align-start">
         <div className="social-buttons flex flex-dir-col align-center">
           <div className="buttons flex align-center">
             <a href="https://www.linkedin.com/in/mdorizon/" target="_blank">
