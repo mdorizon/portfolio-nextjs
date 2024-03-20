@@ -1,6 +1,6 @@
 // components/PostCard.tsx
 
-import { IconBrandHtml5, IconBrandSass, IconBrandCss3, IconBrandFigma, IconBrandPhp, IconBrandNextjs, IconBrandAngular } from "@tabler/icons-react";
+import { IconBrandGithub, IconBrandHtml5, IconBrandSass, IconBrandCss3, IconBrandFigma, IconBrandPhp, IconBrandNextjs, IconBrandAngular } from "@tabler/icons-react";
 
 interface ButtonProps {
   text?: string;
@@ -18,9 +18,11 @@ const iconComponents = {
   IconBrandAngular: IconBrandAngular,
 };
 
+type IconName = keyof typeof iconComponents;
+
 interface TechnoProps {
   text: string;
-  icon: string;
+  icon: IconName;
 }
 
 interface PostCardProps {
@@ -36,7 +38,7 @@ interface PostCardProps {
 const PostCard: React.FC<PostCardProps> = ({ title, subtitle, imageUrl, projectButton, button2, category, technologies }) => {
   return (
     <div className="card flex flex-dir-col webdesign" id="portfolio">
-      <img className="postImage" src={imageUrl} alt={title} />
+      <img className="card-image" src={imageUrl} alt={title} />
       <div className="card-content flex flex-dir-col align-start justify-between">
         <div className="card-title-container flex flex-dir-col">
           <h3>{title}</h3>
@@ -49,7 +51,7 @@ const PostCard: React.FC<PostCardProps> = ({ title, subtitle, imageUrl, projectB
               return (
                 <div key={index} className="html-skill skill flex">
                   <div className="skill-content flex align-center">
-                    {IconComponent ? <IconComponent /> : null}
+                    {IconComponent ? <IconComponent size={22} stroke={1.5} /> : null}
                     <p>{tech.text}</p>
                   </div>
                 </div>
@@ -57,11 +59,11 @@ const PostCard: React.FC<PostCardProps> = ({ title, subtitle, imageUrl, projectB
             })}
           </div>
           <hr />
-          <div className="card-links-container flex align-center justify-end">
+          <div className="card-links-container flex align-center justify-between">
             { projectButton?.enabled && (
               <a href={projectButton.url} target="_blank">
                 <div className="project-button flex justify-center align-center">
-                  <img src="/icons/github-icon.svg" />
+                  <IconBrandGithub size={26} stroke={1.5} />
                 </div>
               </a>
             )}

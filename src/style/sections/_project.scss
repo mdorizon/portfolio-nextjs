@@ -31,48 +31,11 @@
   grid-template-rows: 1fr; 
   gap: 24px 24px; 
 }
-#travee {
-  .card-image {
-    background-image: url(/images/travee.png);
-  }
-}
-#foodies {
-  .card-image {
-    background-image: url(/images/foodies.png);
-  }
-}
-#real_customer {
-  .card-image {
-    background-image: url(/images/real_customer.png);
-  }
-}
-#portfolio {
-  .card-image {
-    background-image: url(/images/portfolio.png);
-    background-position: bottom;
-  }
-}
-#music-dashboard {
-  .card-image {
-    background-image: url(/images/Music-Dashboard.png);
-  }
-}
-#vanezia {
-  .card-image {
-    background-image: url(/images/vanezia.png);
-    background-position: bottom;
-  }
-}
-#forum-php {
-  .card-image {
-    background-image: url(/images/forum-php.png);
-    background-position: bottom;
-  }
-}
 .card {
   min-width: 270px;
   gap: -12px;
   position: relative;
+  overflow: hidden;
   .card-image {
     border-radius: 12px 12px 0 0;
     max-height: 270px;
@@ -80,7 +43,7 @@
     width: 100%;
     z-index: 1;
     user-select: none;
-    background-size: cover;
+    object-fit: cover;
   }
   .card-content {
     height: 100%;
@@ -112,7 +75,7 @@
       gap: 8px;
       .skill {
         gap: 12px;
-        padding: 8px 12px;
+        padding: 6px 10px;
         border-radius: 40px;
         background: var(--color-grey-secondary);
         user-select: none;
@@ -133,7 +96,7 @@
     .card-links-container {
       width: 100%;
       .project-button {
-        padding: 12px;
+        padding: 8px;
         border-radius: 40px;
         background: var(--color-grey-secondary);
         cursor: pointer;
@@ -176,9 +139,4 @@
       font-weight: 600;
     }
   }
-}
-
-.postImage {
-  min-height: 270px;
-  object-fit: cover;
 }
