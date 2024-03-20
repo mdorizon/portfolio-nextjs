@@ -1,6 +1,7 @@
 // components/PostCard.tsx
 
 import { IconBrandGithub, IconBrandHtml5, IconBrandSass, IconBrandCss3, IconBrandFigma, IconBrandPhp, IconBrandNextjs, IconBrandAngular } from "@tabler/icons-react";
+import Image from "next/image";
 
 interface ButtonProps {
   text?: string;
@@ -38,7 +39,9 @@ interface PostCardProps {
 const PostCard: React.FC<PostCardProps> = ({ title, subtitle, imageUrl, projectButton, button2, category, technologies }) => {
   return (
     <div className="card flex flex-dir-col webdesign" id="portfolio">
-      <img className="card-image" src={imageUrl} alt={title} />
+      <div className="card-image">
+        <Image fill src={imageUrl} alt={title} quality={100} />
+      </div>
       <div className="card-content flex flex-dir-col align-start justify-between">
         <div className="card-title-container flex flex-dir-col">
           <h3>{title}</h3>

@@ -37,6 +37,7 @@
   position: relative;
   overflow: hidden;
   .card-image {
+    position: relative;
     border-radius: 12px 12px 0 0;
     max-height: 270px;
     min-height: 270px;
@@ -44,6 +45,10 @@
     z-index: 1;
     user-select: none;
     object-fit: cover;
+    overflow: hidden;
+    img {
+      object-fit: cover;
+    }
   }
   .card-content {
     height: 100%;
