@@ -1,0 +1,40 @@
+/**
+ * --------------------------------------------------------------------------------------------------------------
+ *                                                  DEDICATED FUNCTIONS 
+/**/
+
+/* No pixel size of the project should be determined directly, 
+  but must necessarily go through this function to inearly follow any resizing in view.
+  You shouldn't have to modify anything here */
+
+  $base-font-size: 1;
+
+/* ------------- * Linear adaptation of pixel sizes according to
+    the types of views of the models, 
+    the real view width of the screen * ------------ */
+
+@function strip-unit($value) {
+  /* This function takes a single parameter, $value, 
+  and is used to strip the unit (e.g., "px" or "rem") from a numeric value. 
+  It does this by dividing the value by itself plus zero (0 + 1), effectively removing the unit. */
+  @return math.div($value, ($value * 0 + 1));
+}
+  
+@function ptr($px, $screen) {
+  /* This function combines the concepts of strip-unit() and px-to-vw(). 
+  It first strips the unit from the provided pixel value using strip-unit(), 
+  and then calculates the value in vw units based on the screen size. 
+  It uses the calc() function to perform this calculation and returns the result as a string with "vw" units. */
+  $px-value: strip-unit($px);
+  $viewport-size: strip-unit(map-get($mockups-widths, $screen));
+  @return calc(#{math.div($px-value, $viewport-size)} * #{$base-font-size} * 100vw);
+}
+  
+  
+/* ------------- * Returns the minimum pixel size below which not to go, 
+                    based on a coefficient applied to the detected font size * ------------- */
+
+@function min-size($min-size) {
+  @return #{$min-size * $min-font-coef}px;
+}
+                  
