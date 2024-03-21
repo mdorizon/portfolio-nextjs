@@ -2,8 +2,6 @@
 
 // reste à intégrer:
 // slider pour les cards (sliderjs)
-// le changement de couleur des boutons en fonction de la catégorie choisie
-
 
 import React, { useState } from 'react';
 import PostCard from '@/src/components/postCard';
@@ -105,19 +103,19 @@ const Projects: React.FC = () => {
       <section className="projects-section flex flex-dir-col align-center" id="projects">
         <div className="cards-container flex flex-dir-col">
           <div className="sort-buttons flex align-start wrap">
-            <div className="sort-button flex justify-center align-center active" onClick={() => handleCategoryChange('all')}>
+            <div className={`sort-button flex justify-center align-center ${selectedCategory === 'all' ? 'active' : ''}`} onClick={() => handleCategoryChange('all')}>
               <p>tout les projets</p>
             </div>
-            <div className="sort-button flex justify-center align-center" onClick={() => handleCategoryChange('intégration')}>
+            <div className={`sort-button flex justify-center align-center ${selectedCategory === 'intégration' ? 'active' : ''}`} onClick={() => handleCategoryChange('intégration')}>
               <p>intégration</p>
             </div>
-            <div className="sort-button flex justify-center align-center" onClick={() => handleCategoryChange('webdesign')}>
+            <div className={`sort-button flex justify-center align-center ${selectedCategory === 'webdesign' ? 'active' : ''}`} onClick={() => handleCategoryChange('webdesign')}>
               <p>webdesign</p>
             </div>
-            <div className="sort-button flex justify-center align-center" onClick={() => handleCategoryChange('app php')}>
+            <div className={`sort-button flex justify-center align-center ${selectedCategory === 'app php' ? 'active' : ''}`} onClick={() => handleCategoryChange('app php')}>
               <p>app PHP</p>
             </div>
-            <div className="sort-button flex justify-center align-center" onClick={() => handleCategoryChange('personnels')}>
+            <div className={`sort-button flex justify-center align-center ${selectedCategory === 'personnels' ? 'active' : ''}`} onClick={() => handleCategoryChange('personnels')}>
               <p>personnels</p>
             </div>
           </div>
