@@ -1,11 +1,10 @@
 'use client';
 
-// reste à intégrer:
-// slider pour les cards (sliderjs)
-
 import React, { useState } from 'react';
 import PostCard from '@/src/components/postCard';
 import { PostData } from '@/src/utils/lib/definitions'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 
 const postsData: PostData[] = [
   {
@@ -115,15 +114,39 @@ const Projects: React.FC = () => {
             <div className={`sort-button flex justify-center align-center ${selectedCategory === 'app php' ? 'active' : ''}`} onClick={() => handleCategoryChange('app php')}>
               <p>app PHP</p>
             </div>
-            <div className={`sort-button flex justify-center align-center ${selectedCategory === 'personnels' ? 'active' : ''}`} onClick={() => handleCategoryChange('personnels')}>
-              <p>personnels</p>
-            </div>
           </div>
-          <div className="cards">
-              {filteredPosts.map((post) => (
-                <PostCard key={post.id} {...post} />
-              ))}
-          </div>
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay]}
+            navigation={true}
+            loop={true}
+            pagination={{
+              clickable: true,
+            }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            spaceBetween={24}
+            slidesPerView={3}
+            breakpoints={{
+              320: {
+                slidesPerView: 1
+              },
+              769: {
+                slidesPerView: 2
+              },
+              1441: {
+                slidesPerView: 3
+              }
+            }}
+            className='cards'
+          >
+            {filteredPosts.map((post) => (
+              <SwiperSlide key={post.id}>
+                <PostCard {...post} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </section>
     </>

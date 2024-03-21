@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const PostCard: React.FC<PostCardProps> = ({ title, subtitle, imageUrl, projectButton, button2, category, technologies }) => {
   return (
-    <div className="card flex flex-dir-col webdesign" id="portfolio">
+    <div className="card flex flex-dir-col">
       <div className="card-image">
         <Image fill src={imageUrl} alt={title} quality={100} />
       </div>
