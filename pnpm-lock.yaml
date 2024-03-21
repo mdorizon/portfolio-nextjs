@@ -35,6 +35,9 @@ dependencies:
   react-dom:
     specifier: 18.2.0
     version: 18.2.0(react@18.2.0)
+  sass-math:
+    specifier: ^1.0.0
+    version: 1.0.0
   swiper:
     specifier: ^11.0.7
     version: 11.0.7
@@ -3573,6 +3576,10 @@ packages:
       es-errors: 1.3.0
       is-regex: 1.1.4
     dev: true
+
+  /sass-math@1.0.0:
+    resolution: {integrity: sha512-sNRWEW71zu9HfgtIvUQYi5FTXys10x/wtOFtaBFg2yTgdDiGlxyr448suw8ZKAEHX4T2X1uxnrpcAVwIerDTKQ==}
+    dev: false
 
   /sass@1.71.1:
     resolution: {integrity: sha512-wovtnV2PxzteLlfNzbgm1tFXPLoZILYAMJtvoXXkD7/+1uP41eKkIt1ypWq5/q2uT94qHjXehEYfmjKOvjL9sg==}

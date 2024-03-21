@@ -1,0 +1,21 @@
+// here you can modify your differents website breakpoints
+// for the ptr function
+
+$mockups-widths: (
+  mobile              : 320,
+  tablet              : 768,
+  desktop             : 1920,
+);
+
+// --------------- //
+
+// here you can modify your differents website breakpoints
+// @mixin min-width(breakpoint) will depending on these values
+// @mixin max-width(breakpoint) will depending on next breakpoint starting width -1
+  
+$breakpoints: ( 
+    mobile              : 0,
+    tablet              : 381,
+    laptop              : 768,
+    desktop             : 1440,
+);

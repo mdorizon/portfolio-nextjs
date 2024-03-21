@@ -1,4 +1,12 @@
+@use "sass:math";
+
 @import 'swiper/scss', 'swiper/scss/navigation', 'swiper/scss/pagination';
+
+@import 'utils/breakpoints/variables.scss';
+@import 'utils/breakpoints/functions.scss';
+
+@import 'utils/sizes/functions.scss';
+
 @import 
 'sections/header',
 'layout/grid',
