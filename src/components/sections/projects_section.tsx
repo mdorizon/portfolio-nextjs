@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import PostCard from '@/src/components/postCard';
 import { PostData } from '@/src/utils/lib/definitions'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, Pagination } from 'swiper/modules';
 
 const postsData: PostData[] = [
   {
@@ -116,8 +116,7 @@ const Projects: React.FC = () => {
             </div>
           </div>
           <Swiper
-            modules={[Navigation, Pagination, Autoplay]}
-            navigation={true}
+            modules={[ Pagination, Autoplay]}
             loop={true}
             pagination={{
               clickable: true,
