@@ -1,42 +1,8 @@
-// components/PostCard.tsx
+'use client'
 
-import { IconBrandGithub, IconBrandHtml5, IconBrandSass, IconBrandCss3, IconBrandFigma, IconBrandPhp, IconBrandNextjs, IconBrandAngular } from "@tabler/icons-react";
+import { PostCardProps, iconComponents } from '@/src/utils/lib/definitions'
+import { IconBrandGithub } from "@tabler/icons-react";
 import Image from "next/image";
-
-// déplacer toutes les interfaces dans l'utils d'interface
-
-interface ButtonProps {
-  text?: string;
-  url: string;
-  enabled: boolean;
-}
-
-const iconComponents = {
-  IconBrandFigma: IconBrandFigma,
-  IconBrandHtml5: IconBrandHtml5,
-  IconBrandSass: IconBrandSass,
-  IconBrandCss3: IconBrandCss3,
-  IconBrandPhp: IconBrandPhp,
-  IconBrandNextjs: IconBrandNextjs,
-  IconBrandAngular: IconBrandAngular,
-};
-
-type IconName = keyof typeof iconComponents;
-
-interface TechnoProps {
-  text: string;
-  icon: IconName;
-}
-
-interface PostCardProps {
-  title: string;
-  subtitle: string;
-  imageUrl: string;
-  projectButton?: ButtonProps;
-  button2?: ButtonProps;
-  category: string;
-  technologies: Array<TechnoProps>;
-}
 
 const PostCard: React.FC<PostCardProps> = ({ title, subtitle, imageUrl, projectButton, button2, category, technologies }) => {
   return (

@@ -1,41 +1,7 @@
 'use client';
 
+import { PostData } from '@/src/utils/lib/definitions'
 import PostCard from '@/src/components/postCard';
-import { IconBrandGithub, IconBrandHtml5, IconBrandSass, IconBrandCss3, IconBrandFigma, IconBrandPhp, IconBrandNextjs, IconBrandAngular } from "@tabler/icons-react";
-
-interface ButtonProps {
-  text?: string;
-  url: string;
-  enabled: boolean;
-}
-
-const iconComponents = {
-  IconBrandFigma: IconBrandFigma,
-  IconBrandHtml5: IconBrandHtml5,
-  IconBrandSass: IconBrandSass,
-  IconBrandCss3: IconBrandCss3,
-  IconBrandPhp: IconBrandPhp,
-  IconBrandNextjs: IconBrandNextjs,
-  IconBrandAngular: IconBrandAngular,
-};
-
-type IconName = keyof typeof iconComponents;
-
-interface TechnoProps {
-  text: string;
-  icon: IconName;
-}
-
-interface PostData {
-  id: number;
-  title: string;
-  subtitle: string;
-  imageUrl: string;
-  projectButton?: ButtonProps;
-  button2?: ButtonProps;
-  category: string;
-  technologies: Array<TechnoProps>;
-}
 
 const postsData: PostData[] = [
   {
