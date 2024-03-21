@@ -3,6 +3,8 @@
 import { IconBrandGithub, IconBrandHtml5, IconBrandSass, IconBrandCss3, IconBrandFigma, IconBrandPhp, IconBrandNextjs, IconBrandAngular } from "@tabler/icons-react";
 import Image from "next/image";
 
+// déplacer toutes les interfaces dans l'utils d'interface
+
 interface ButtonProps {
   text?: string;
   url: string;
