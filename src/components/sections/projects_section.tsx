@@ -1,7 +1,13 @@
 'use client';
 
-import { PostData } from '@/src/utils/lib/definitions'
+// reste à intégrer:
+// slider pour les cards (sliderjs)
+// le changement de couleur des boutons en fonction de la catégorie choisie
+
+
+import React, { useState } from 'react';
 import PostCard from '@/src/components/postCard';
+import { PostData } from '@/src/utils/lib/definitions'
 
 const postsData: PostData[] = [
   {
@@ -83,36 +89,47 @@ const postsData: PostData[] = [
 ];
 // IconBrandHtml5 IconBrandSass IconBrandCss3 IconBrandFigma IconBrandPhp IconBrandNextjs IconBrandAngular
 
-export default function Projects() {
+const Projects: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
+  const handleCategoryChange = (category: string): void => {
+    setSelectedCategory(category);
+  };
+
+  const filteredPosts = postsData.filter((post) => {
+    return selectedCategory === 'all' || post.category.toLowerCase() === selectedCategory.toLowerCase();
+  });
 
   return (
     <>
       <section className="projects-section flex flex-dir-col align-center" id="projects">
         <div className="cards-container flex flex-dir-col">
           <div className="sort-buttons flex align-start wrap">
-            <div className="sort-button flex justify-center align-center active" id="all">
+            <div className="sort-button flex justify-center align-center active" onClick={() => handleCategoryChange('all')}>
               <p>tout les projets</p>
             </div>
-            <div className="sort-button flex justify-center align-center" id="integration">
+            <div className="sort-button flex justify-center align-center" onClick={() => handleCategoryChange('intégration')}>
               <p>intégration</p>
             </div>
-            <div className="sort-button flex justify-center align-center" id="webdesign">
+            <div className="sort-button flex justify-center align-center" onClick={() => handleCategoryChange('webdesign')}>
               <p>webdesign</p>
             </div>
-            <div className="sort-button flex justify-center align-center" id="php">
+            <div className="sort-button flex justify-center align-center" onClick={() => handleCategoryChange('app php')}>
               <p>app PHP</p>
             </div>
-            <div className="sort-button flex justify-center align-center" id="perso">
+            <div className="sort-button flex justify-center align-center" onClick={() => handleCategoryChange('personnels')}>
               <p>personnels</p>
             </div>
           </div>
           <div className="cards">
-            {postsData.map((post) => (
-              <PostCard key={post.id} {...post} />
-            ))}
+              {filteredPosts.map((post) => (
+                <PostCard key={post.id} {...post} />
+              ))}
           </div>
         </div>
       </section>
     </>
   );
 };
+
+export default Projects;

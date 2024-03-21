@@ -103,14 +103,14 @@ export const iconComponents = {
   IconBrandAngular: IconBrandAngular,
 };
 
-type IconName = keyof typeof iconComponents;
-interface ButtonProps {
+export type IconName = keyof typeof iconComponents;
+export interface ButtonProps {
   text?: string;
   url: string;
   enabled: boolean;
 }
 
-interface TechnoProps {
+export interface TechnoProps {
   text: string;
   icon: IconName;
 }
