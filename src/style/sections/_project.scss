@@ -3,6 +3,12 @@
   width: 100%;
   gap: 32px;
   align-items: start;
+  .swiper {
+    padding-bottom: 40px;
+  }
+  .swiper-pagination {
+    bottom: 0;
+  }
 }
 .sort-buttons {
   gap: 19px;
@@ -35,9 +41,16 @@
 }
 .card {
   min-width: 270px;
+  max-height: 640px;
+  height: 100%;
   gap: -12px;
   position: relative;
+  border-radius: 12px;
   overflow: hidden;
+  cursor: grab;
+  &:active {
+    cursor: grabbing;
+  }
   .card-image {
     position: relative;
     border-radius: 12px 12px 0 0;

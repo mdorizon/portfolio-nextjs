@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import { PostCardProps, iconComponents } from '@/src/utils/lib/definitions'
 import { IconBrandGithub } from "@tabler/icons-react";
@@ -8,7 +8,7 @@ const PostCard: React.FC<PostCardProps> = ({ title, subtitle, imageUrl, projectB
   return (
     <div className="card flex flex-dir-col">
       <div className="card-image">
-        <Image fill src={imageUrl} alt={title} quality={100} />
+        <Image fill src={imageUrl} alt={title} quality={100} sizes='vw' />
       </div>
       <div className="card-content flex flex-dir-col align-start justify-between">
         <div className="card-title-container flex flex-dir-col">
