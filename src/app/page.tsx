@@ -7,7 +7,7 @@ import Skills from "../components/sections/skills_section";
 
 export default function Page() {
   return (
-    <>
+    <body className="home-page">
       <Header />
       <main className="flex flex-dir-col">
         <Whoami />
@@ -15,6 +15,6 @@ export default function Page() {
         <Skills />
       </main>
       <Footer />
-    </>
+    </body>
   );
 }

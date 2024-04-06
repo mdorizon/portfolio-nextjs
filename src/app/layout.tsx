@@ -13,12 +13,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+
   return (
-    <html lang="fr">
+    <html lang="fr" className={`${poppins.className} antialiased`}>
       <SpeedInsights />
-      <body className={`${poppins.className} antialiased`}>
-        {children}
-      </body>
+      {children}
     </html>
   );
 }
