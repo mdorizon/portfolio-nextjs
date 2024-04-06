@@ -512,3 +512,17 @@
   }
 }
 // Tablet responsive END
+.dashboard {
+  display: flex;
+  gap: 0;
+  .admin-navigation {
+    max-width: 300px;
+    width: 100%;
+    background-color: red;
+  }
+  
+  .admin-home {
+    width: 100%;
+    background-color: blue;
+  }
+}
