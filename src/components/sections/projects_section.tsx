@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import PostCard from '@/src/components/postCard';
-import { PostData } from '@/src/utils/lib/definitions'
+import { PostData, PostCategory } from '@/src/utils/lib/definitions'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
 
@@ -86,6 +86,13 @@ const postsData: PostData[] = [
 ];
 // IconBrandHtml5 IconBrandSass IconBrandCss3 IconBrandFigma IconBrandPhp IconBrandNextjs IconBrandAngular
 
+const postsCategories: PostCategory[] = [
+  {id: 1, slug: "all", text: "tout les projets"},
+  {id: 2, slug: "intégration", text: "intégration"},
+  {id: 3, slug: "webdesign", text: "webdesign"},
+  {id: 4, slug: "app php", text: "app PHP"}
+]
+
 const Projects: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
@@ -102,18 +109,11 @@ const Projects: React.FC = () => {
       <section className="projects-section flex flex-dir-col align-center" id="projects">
         <div className="cards-container flex flex-dir-col">
           <div className="sort-buttons flex align-start wrap">
-            <div className={`sort-button flex justify-center align-center ${selectedCategory === 'all' ? 'active' : ''}`} onClick={() => handleCategoryChange('all')}>
-              <p>tout les projets</p>
-            </div>
-            <div className={`sort-button flex justify-center align-center ${selectedCategory === 'intégration' ? 'active' : ''}`} onClick={() => handleCategoryChange('intégration')}>
-              <p>intégration</p>
-            </div>
-            <div className={`sort-button flex justify-center align-center ${selectedCategory === 'webdesign' ? 'active' : ''}`} onClick={() => handleCategoryChange('webdesign')}>
-              <p>webdesign</p>
-            </div>
-            <div className={`sort-button flex justify-center align-center ${selectedCategory === 'app php' ? 'active' : ''}`} onClick={() => handleCategoryChange('app php')}>
-              <p>app PHP</p>
-            </div>
+            {postsCategories.map((category) => (
+              <div key={category.id} className={`sort-button flex justify-center align-center ${selectedCategory === category.slug ? 'active' : ''}`} onClick={() => handleCategoryChange(category.slug)}>
+                <p>{category.text}</p>
+              </div>
+            ))}
           </div>
           <Swiper
             modules={[ Pagination, Autoplay]}
