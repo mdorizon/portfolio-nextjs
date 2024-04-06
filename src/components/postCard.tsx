@@ -8,7 +8,7 @@ const PostCard: React.FC<PostCardProps> = ({ title, subtitle, imageUrl, projectB
   return (
     <div className="card flex flex-dir-col">
       <div className="card-image">
-        <Image fill src={imageUrl} alt={title} quality={100} />
+        <Image fill src={imageUrl} alt={title} quality={100} sizes="500px" priority={false} placeholder = 'empty' />
       </div>
       <div className="card-content flex flex-dir-col align-start justify-between">
         <div className="card-title-container flex flex-dir-col">
