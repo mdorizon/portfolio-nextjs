@@ -1,5 +1,13 @@
 'use client';
 
+import { SkillData } from "@/src/utils/lib/definitions";
+
+const skillsData: SkillData[] = [
+  {id: 1, category: "Langages", skills: [{skill: "HTML | CSS"}, {skill: "SCSS"}, {skill: "JavaScript"}]},
+  {id: 2, category: "Logiciels", skills: [{skill: "VSCode"}, {skill: "Figma"}, {skill: "Git"}]},
+  {id: 3, category: "Frameworks", skills: [{skill: "Boostrap"}, {skill: "Tailwind"}, {skill: "Discord.js"}]}
+]
+
 export default function Skills() {
 
   return (
@@ -8,39 +16,19 @@ export default function Skills() {
         <div className="skills-container flex flex-dir-col align-center">
           <h3 className="skills-title">Mes compétences</h3>
           <div className="skills-cards flex">
-            <div className="skill-card flex flex-dir-col align-center">
-              <div className="skill-content flex flex-dir-col">
-                <h3>Langages</h3>
-                <hr />
-                <ul>
-                  <li>HTML | CSS</li>
-                  <li>SCSS</li>
-                  <li>JavaScript</li>
-                </ul>
+            {skillsData.map((data) => (
+              <div key={data.id} className="skill-card flex flex-dir-col align-center">
+                <div className="skill-content flex flex-dir-col">
+                  <h3>{data.category}</h3>
+                  <hr />
+                  <ul>
+                    {data.skills.map((data, index) => (
+                      <li key={index}>{data.skill}</li>  
+                    ))}
+                  </ul>
+                </div>
               </div>
-            </div>
-            <div className="skill-card flex flex-dir-col align-center">
-              <div className="skill-content flex flex-dir-col">
-                <h3>Logiciels</h3>
-                <hr />
-                <ul>
-                  <li>VSCode</li>
-                  <li>Figma</li>
-                  <li>Git</li>
-                </ul>
-              </div>
-            </div>
-            <div className="skill-card flex flex-dir-col align-center">
-              <div className="skill-content flex flex-dir-col">
-                <h3>Frameworks</h3>
-                <hr />
-                <ul>
-                  <li>Boostrap</li>
-                  <li>Tailwind</li>
-                  <li>Discord.js</li>
-                </ul>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
