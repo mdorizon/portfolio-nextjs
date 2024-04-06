@@ -135,3 +135,29 @@ export interface PostData {
   category: string;
   technologies: Array<TechnoProps>;
 }
+
+export interface PostCategory {
+  id: number;
+  slug: string;
+  text: string;
+}
+
+
+// Navigation
+
+export interface NavLinks {
+  id: number;
+  href: string;
+  text: string;
+}
+
+// Skills section 
+
+export interface SkillsProps {
+  skill: string;
+}
+export interface SkillData {
+  id: number;
+  category: string;
+  skills: Array<SkillsProps>
+}

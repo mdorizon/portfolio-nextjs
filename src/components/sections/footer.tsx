@@ -1,6 +1,8 @@
 'use client';
 
+
 import SocialsContainer from "../socials_container";
+import { navLinks } from "./navigation";
 
 export default function Footer() {
 
@@ -23,18 +25,11 @@ export default function Footer() {
               <SocialsContainer hasScrollDown={false} />
             </div>
             <div className="nav-items flex flex-dir-col">
-              <a href="#whoami">
-                <li>QUI SUIS-JE ?</li>
-              </a>
-              <a href="#projects">
-                <li>MES PROJETS</li>
-              </a>
-              <a href="#skills">
-                <li>MES COMPÉTENCES</li>
-              </a>
-              <a href="#contact">
-                <li>ME CONTACTER</li>
-              </a>
+              {navLinks.map((link) => (
+                <a key={link.id} href={link.href}>
+                  <li>{link.text}</li>
+                </a>
+              ))}
             </div>
           </div>
         </div>
