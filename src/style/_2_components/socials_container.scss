@@ -1,30 +1,84 @@
-.social-buttons {
-  user-select: none;
-  gap: 32px;
-}
-.arrow {
-  padding: 10px 20px;
-  transition: 0.3s all ease-out;
-  animation: arrow 1s ease-in-out infinite alternate;
-}
-.buttons {
-  gap: 20px;
-  div {
-    width: 45px;
-    height: 45px;
-    border-radius: 26px;
-    border: 2.5px solid var(--color-light);
-    transition: 0.3s all ease-out;
+.socials {
+  display: flex;
+  align-items: start;
+  .social-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+    gap: 32px;
+    @include max-width(laptop) {
+      gap: 16px;
+    }
+    .arrow {
+      padding: 10px 20px;
+      transition: 0.3s all ease-out;
+      animation: arrow 1s ease-in-out infinite alternate;
+      @include max-width(desktop) {
+        width: 11px;
+        height: 32px;
+      }
+      @include max-width(laptop) {
+        animation: arrow 1.5s ease-in-out infinite alternate;
+        width: 11px;
+        height: 26px;
+      }
+    }
+    .buttons {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      @include max-width(laptop) {
+        gap: 12px;
+      }
+      .button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      div {
+        width: 45px;
+        height: 45px;
+        border-radius: 26px;
+        border: 2.5px solid var(--color-light);
+        transition: 0.3s all ease-out;
+        @include max-width(desktop) {
+          width: 35px;
+          height: 35px;
+        }
+        @include max-width(laptop) {
+          width: 25px;
+          height: 25px;
+          border: 1.5px solid var(--color-light);
+        }
+        svg {
+          @include max-width(desktop) {
+            height: 22px;
+          }
+          @include max-width(laptop) {
+            height: 16px;
+          }
+        }
+      }
+      div:hover {
+        opacity: 0.6;
+      }
+    }
   }
-  div:hover {
-    opacity: 0.6;
-  }
 }
+
+// *---------------*
+// *   animations  *
+// *---------------*
+
 @keyframes arrow {
   from {
     transform: translateY(0);
   }
   to {
-    transform: translateY(30px);
+    transform: translateY(30px);    
+    @include max-width(laptop) {
+      transform: translateY(20px);
+    }
   }
 }

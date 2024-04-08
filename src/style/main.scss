@@ -46,33 +46,6 @@
   body {
     gap: 96px;
   }
-  .social-buttons {
-    .linkedin-button {
-      width: 35px;
-      height: 35px;
-      img {
-        width: 13px;
-      }
-    }
-    .github-button {
-      width: 35px;
-      height: 35px;
-      i {
-        font-size: 22px;
-      }
-    }
-    .dribbble-button {
-      width: 35px;
-      height: 35px;
-      i {
-        font-size: 22px;
-      }
-    }
-    .arrow {
-      width: 11px;
-      height: 32px;
-    }
-  }
   .whoami-text {
     max-width: 700px;
     p {
@@ -139,51 +112,6 @@
 @media only screen and (max-width: 768px){
   body, main {
     gap: 48px;
-  }
-  .arrow {
-    animation: arrow 1.5s ease-in-out infinite alternate;
-  }
-  @keyframes arrow {
-    from {
-      transform: translateY(0);
-    }
-    to {
-      transform: translateY(20px);
-    }
-  }
-  .social-buttons {
-    .buttons {
-      gap: 12px;
-    }
-    gap: 16px;
-    .linkedin-button {
-      width: 25px;
-      height: 25px;
-      border: 1.5px solid var(--color-light);
-      img {
-        width: 10px;
-      }
-    }
-    .github-button {
-      width: 25px;
-      height: 25px;
-      border: 1.5px solid var(--color-light);
-      i {
-        font-size: 16px;
-      }
-    }
-    .dribbble-button {
-      width: 25px;
-      height: 25px;
-      border: 1.5px solid var(--color-light);
-      i {
-        font-size: 16px;
-      }
-    }
-    .arrow {
-      width: 11px;
-      height: 26px;
-    }
   }
   .whoami-section {
     gap: 64px;
