@@ -46,12 +46,6 @@
   body {
     gap: 96px;
   }
-  .whoami-text {
-    max-width: 700px;
-    p {
-      line-height: 20px;
-    }
-  }
   .cards-container {
     max-width: 700px;
   }
@@ -101,13 +95,6 @@
 @media only screen and (max-width: 768px){
   body, main {
     gap: 48px;
-  }
-  .whoami-section {
-    gap: 64px;
-    .whoami-text {
-      max-width: 100%;
-      padding: 0 16px;
-    }
   }
   .projects-section {
     margin: 0 32px;
