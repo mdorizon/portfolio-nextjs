@@ -1,7 +1,7 @@
 'use client';
 
-import Navigation from "./navigation";
-import Banner from "./banner";
+import Navigation from "../components/navigation";
+import Banner from "../components/banner";
 
 export default function Header() {
 

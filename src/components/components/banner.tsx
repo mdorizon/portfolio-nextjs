@@ -1,6 +1,6 @@
 'use client';
 
-import SocialsContainer from '../socials_container';
+import SocialsContainer from './socials_buttons';
 import { IconDownload } from '@tabler/icons-react';
 import Image from 'next/image';
 

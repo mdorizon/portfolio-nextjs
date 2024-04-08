@@ -1,8 +1,8 @@
 'use client';
 
 
-import SocialsContainer from "../socials_container";
-import { navLinks } from "./navigation";
+import SocialsContainer from "../components/socials_buttons";
+import { navLinks } from "../components/navigation";
 
 export default function Footer() {
 
