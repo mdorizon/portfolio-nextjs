@@ -20,6 +20,7 @@
 
 
 // components
+@import '_2_components/post_cards.scss';
 @import '_2_components/socials_container.scss';
 
 
@@ -46,42 +47,6 @@
   body {
     gap: 96px;
   }
-  .cards-container {
-    max-width: 700px;
-  }
-  .sort-buttons {
-    gap: 12px;
-    .sort-button {
-      padding: 6px 12px;
-    }
-  }
-  .cards {
-    display: grid; 
-    grid-template-columns: 1fr 1fr; 
-    grid-template-rows: 1fr; 
-    gap: 24px 24px; 
-    .card {
-      .card-content {
-        gap: 20px;
-        .skill .skill-content {
-          img {
-            width: 14px;
-          }
-        }
-      }
-      .card-links-container {
-        .project-button {
-          padding: 8px;
-          img {
-            width: 16px;
-          }
-        }
-        .more-button {
-          padding: 8px 12px;
-        }
-      }
-    }
-  }
 }
 // Laptop responsive END
 
@@ -89,45 +54,6 @@
 @media only screen and (max-width: 768px){
   body, main {
     gap: 48px;
-  }
-  .projects-section {
-    margin: 0 32px;
-    .cards-container {
-      max-width: 100%;
-      align-items: center;
-      .sort-buttons {
-        gap: 8px;
-        .sort-button {
-          padding: 4px 10px;
-        }
-      }
-      .cards {
-        grid-template-columns: 1fr; 
-        grid-template-rows: 1fr; 
-        gap: 24px 24px;
-        .card {
-          max-width: 370px;
-          .card-image {
-            max-height: 200px;
-            min-height: 200px;
-          }
-          .category-tag {
-            padding: 3px 10px;
-            top: 177px;
-          }
-          .card-content {
-            gap: 16px;
-            padding: 24px 16px 16px 22px;
-            .card-buttons-container {
-              gap: 12px;
-            }
-            .card-skills-container .skill {
-              padding: 6px 8px;
-            }
-          }
-        }
-      }
-    }
   }
 }
 
