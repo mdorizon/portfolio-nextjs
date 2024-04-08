@@ -7,20 +7,27 @@ header {
   .navbar {
     display: flex;
     justify-content: center;
-    @include max-width(laptop) {
+    z-index: 9999;
+    @include max-width(tablet) {
       justify-content: flex-end;
       width: 100%;
+      position: fixed;
+      top: 0;
+      background: rgba(42, 46, 49, 0.41);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
     }
     .nav-items {
       display: flex;
       padding: var(--space-4xl) 0;
       gap: var(--space-4xl);
-      @include max-width(laptop) {
+      @include max-width(tablet) {
         padding: var(--space-md);
       }
       a {
         font-weight: 600;
-        @include max-width(desktop) {
+        @include max-width(laptop) {
           font-size: 0.625rem;
         }
       }
@@ -44,7 +51,7 @@ header {
         }
       }
       .nav-item {
-        @include max-width(laptop) {
+        @include max-width(tablet) {
           display: none;
         }
       }
@@ -86,7 +93,7 @@ header {
           display: flex;
           flex-direction: column;
           .burger-nav-item {
-            @include max-width(laptop) {
+            @include max-width(tablet) {
               font-size: 0.875rem; 
             }
           }
@@ -95,7 +102,7 @@ header {
       .burger-icon {
         display: none;
         height: 24px;
-        @include max-width(laptop) {
+        @include max-width(tablet) {
           display: unset;
         }
       }
@@ -110,19 +117,20 @@ header {
     padding: var(--space-13xl) 0px;
     display: flex;
     justify-content: center;
-    @include max-width(laptop) {
+    @include max-width(tablet) {
       padding: var(--space-8xl) 0;
+      margin-top: 58px;
     }
     .container {
       display: flex;
       align-items: center;
       max-width: var(--space-sectionSmallMaxWidth);
       gap: var(--space-13xl);
-      @include max-width(desktop) {
+      @include max-width(laptop) {
         flex-direction: column-reverse;
         max-width: 700px;
       }
-      @include max-width(laptop) {
+      @include max-width(tablet) {
         max-width: 100%;
         width: 100%;
       }
@@ -130,11 +138,11 @@ header {
         display: flex;
         flex-direction: column;
         gap: 80px;
-        @include max-width(desktop) {
+        @include max-width(laptop) {
           align-items: center;
           text-align: center;
         }
-        @include max-width(laptop) {
+        @include max-width(tablet) {
           gap: 40px;
         }
         .header-text {
@@ -145,16 +153,29 @@ header {
             font-weight: 300;
             line-height: 28px;
             opacity: 0.5;
-            @include max-width(desktop) {
+            @include max-width(laptop) {
               line-height: 16px;
             }
-            @include max-width(laptop) {
+            @include max-width(tablet) {
               padding: 0 16px;
             }
           }
           .title-container {
             h2 {
               color: var(--color-secondary);
+              font-weight: 600;
+              @include max-width(tablet) {
+                font-size: 1.125rem;
+              }
+            }
+            h1 {
+              font-weight: 600;
+              @include max-width(laptop) {
+                font-size: 2.125rem;
+              }
+              @include max-width(tablet) {
+                font-size: 1.625rem;
+              }
             }
           }
         }
@@ -162,7 +183,7 @@ header {
           display: flex;
           align-items: center;
           gap: 40px;
-          @include max-width(laptop) {
+          @include max-width(tablet) {
             gap: 30px;
           }
         }
@@ -175,11 +196,11 @@ header {
           border-radius: 400px;
           box-shadow: 0px 27px 75px 29px rgba(82, 96, 255, 0.22);
           user-select: none;
-          @include max-width(desktop) {
+          @include max-width(laptop) {
             width: 350px;
             height: 350px;
           }
-          @include max-width(laptop) {
+          @include max-width(tablet) {
             width: 250px;
             height: 250px;
             box-shadow: 0px 17px 25px 19px rgba(82, 96, 255, 0.10);
@@ -192,22 +213,22 @@ header {
           height: 85px;
           animation: floatFigma 2s ease-in-out infinite alternate;
           @include max-width(laptop) {
+            width: 60px;
+            height: 60px;
+          }
+          @include max-width(tablet) {
             animation: floatFigma 2.5s ease-in-out infinite alternate;
             width: 40px;
             height: 40px;
           }
-          @include max-width(desktop) {
-            width: 60px;
-            height: 60px;
-          }
           .figma-icon {
             width: 30px;
             height: 45px;
-            @include max-width(desktop) {
+            @include max-width(laptop) {
               width: 20px;
               height: 35px;
             }
-            @include max-width(laptop) {
+            @include max-width(tablet) {
               width: 15px;
               height: 30px;
             }
@@ -219,11 +240,11 @@ header {
           width: 85px;
           height: 85px;
           animation: floatTailwind 3s ease-in-out infinite alternate;
-          @include max-width(desktop) {
+          @include max-width(laptop) {
             width: 60px;
             height: 60px;
           }
-          @include max-width(laptop) {
+          @include max-width(tablet) {
             animation: floatTailwind 3.5s ease-in-out infinite alternate;
             width: 40px;
             height: 40px;
@@ -231,11 +252,11 @@ header {
           .tailwind-icon {
             width: 51px;
             height: 30px;
-            @include max-width(desktop) {
+            @include max-width(laptop) {
               width: 39px;
               height: 20px;
             }
-            @include max-width(laptop) {
+            @include max-width(tablet) {
               width: 34px;
               height: 15px;
             }
@@ -247,11 +268,11 @@ header {
           width: 85px;
           height: 85px;
           animation: floatSass 2.5s ease-in-out infinite alternate;
-          @include max-width(desktop) {
+          @include max-width(laptop) {
             width: 60px;
             height: 60px;
           }
-          @include max-width(laptop) {
+          @include max-width(tablet) {
             animation: floatSass 3s ease-in-out infinite alternate;
             width: 40px;
             height: 40px;
@@ -259,11 +280,11 @@ header {
           .sass-icon {
             width: 54px;
             height: 40px;
-            @include max-width(desktop) {
+            @include max-width(laptop) {
               width: 44px;
               height: 30px;
             }
-            @include max-width(laptop) {
+            @include max-width(tablet) {
               width: 34px;
               height: 20px;
             }
@@ -275,13 +296,13 @@ header {
           bottom: 11px;
           right: -25px;
           animation: floatVscode 3s ease-in-out infinite alternate;
-          @include max-width(desktop) {
+          @include max-width(laptop) {
             width: 29px;
             height: 29px;
             bottom: 26px;
             right: -10px;
           }
-          @include max-width(laptop) {
+          @include max-width(tablet) {
             animation: floatVscode 3.5s ease-in-out infinite alternate;
             width: 19px;
             height: 19px;
@@ -291,11 +312,11 @@ header {
           .vscode-icon {
             width: 24px;
             height: 24px;
-            @include max-width(desktop) {
+            @include max-width(laptop) {
               width: 14px;
               height: 14px;
             }
-            @include max-width(laptop) {
+            @include max-width(tablet) {
               width: 9px;
               height: 9px;
             }
@@ -326,7 +347,7 @@ header {
   }
   to {
     transform: translate(-5px, 5px);
-    @include max-width(laptop) {
+    @include max-width(tablet) {
       transform: translate(-4px, 4px);
     }
   }
@@ -337,7 +358,7 @@ header {
   }
   to {
     transform: translate(5px, 5px);
-    @include max-width(laptop) {
+    @include max-width(tablet) {
       transform: translate(4px, 4px);
     }
   }
@@ -348,7 +369,7 @@ header {
   }
   to {
     transform: translate(5px, -5px);
-    @include max-width(laptop) {
+    @include max-width(tablet) {
       transform: translate(4px, -4px);
     }
   }
@@ -359,7 +380,7 @@ header {
   }
   to {
     transform: translate(5px, 12px);
-    @include max-width(laptop) {
+    @include max-width(tablet) {
       transform: translate(3px, 9px);
     }
   }

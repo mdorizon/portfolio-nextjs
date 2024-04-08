@@ -26,7 +26,7 @@
 
 // Example usage:
 // @include max-width(mobile) will generate @media (max-width: 480px) {...}
-// @include max-width(tablet) will generate @media (max-width: 1023px) {...}
+// @include max-width(mobile) will generate @media (max-width: 1023px) {...}
 @mixin max-width($breakpoint) {
     @if map-has-key($breakpoints, $breakpoint) {
         $keys: map-keys($breakpoints);

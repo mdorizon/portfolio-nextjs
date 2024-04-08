@@ -31,17 +31,17 @@ const PostCard: React.FC<PostCardProps> = ({ title, subtitle, imageUrl, projectB
           </div>
           <hr />
           <div className="card-links-container">
-            { projectButton?.enabled && (
-              <a href={projectButton.url} target="_blank">
-                <div className="project-button">
-                  <IconBrandGithub size={26} stroke={1.5} />
-                </div>
-              </a>
-            )}
             { button2?.enabled && (
               <a href={button2.url} target="_blank">
                 <div className="more-button">
                   <p>{button2.text}</p>
+                </div>
+              </a>
+            )}
+            { projectButton?.enabled && (
+              <a href={projectButton.url} target="_blank">
+                <div className="project-button">
+                  <IconBrandGithub size={26} stroke={1.5} />
                 </div>
               </a>
             )}

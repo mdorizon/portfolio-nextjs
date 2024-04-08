@@ -9,16 +9,16 @@
     max-width: 1200px;
     width: 100%;
     gap: 24px;
-    @include max-width(desktop) {
+    @include max-width(laptop) {
       max-width: 700px;
     }
     .skills-title {
       color: var(--color-secondary);
       font-weight: 700;
-      @include max-width(desktop) {
+      @include max-width(laptop) {
         font-size: 1.125rem;
       }
-      @include max-width(laptop) {
+      @include max-width(tablet) {
         font-size: 1rem;
       }
     }
@@ -26,7 +26,7 @@
       display: flex;
       gap: 24px;
       width: 100%;
-      @include max-width(laptop) {
+      @include max-width(tablet) {
         gap: 16px;
       }
       .skill-card {
@@ -38,11 +38,15 @@
           display: flex;
           flex-direction: column;
           gap: 16px;
-          @include max-width(laptop) {
+          @include max-width(tablet) {
             gap: 12px;
           }
           h3 {
             opacity: 0.8;
+            font-size: 20px;
+            @include max-width(tablet) {
+              font-size: 0.875rem;
+            }
           }
           hr {
             margin: 0;
@@ -54,7 +58,7 @@
             opacity: 0.6;
             padding-left: 17px;
             li {
-              @include max-width(laptop) {
+              @include max-width(tablet) {
                 font-size: 0.625rem;
               }
             }

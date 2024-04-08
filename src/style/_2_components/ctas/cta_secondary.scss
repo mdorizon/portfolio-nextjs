@@ -7,20 +7,20 @@
   display: flex;
   align-items: center;
   svg {
-    @include max-width(desktop) {
-      height: 10px;
+    @include max-width(laptop) {
+      height: 14px;
     }
   }
-  @include max-width(desktop) {
+  @include max-width(laptop) {
     padding: 15px 25px;
   }
-  @include max-width(laptop) {
+  @include max-width(tablet) {
     padding: 10px 20px;
   }
   p {
     font-size: var(--font-size-button);
     font-weight: 600;
-    @include max-width(desktop) {
+    @include max-width(tablet) {
       font-size: 0.625rem;
     }
   }

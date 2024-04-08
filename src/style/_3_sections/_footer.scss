@@ -2,7 +2,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 96px;
-  @include max-width(laptop) {
+  @include max-width(tablet) {
     gap: 48px;
   }
   .contact-me {
@@ -21,6 +21,9 @@ footer {
       }
       h1 {
         text-align: center;
+        @include max-width(tablet) {
+          font-size: 1.375rem;
+        }
       }
     }
   }
@@ -30,10 +33,10 @@ footer {
     align-items: center;
     background: var(--color-grey-primary);
     padding: 32px 64px;
-    @include max-width(desktop) {
+    @include max-width(laptop) {
       padding: 22px 34px;
     }
-    @include max-width(laptop) {
+    @include max-width(tablet) {
       padding: 14px 18px;
     }
     .footer-container {
@@ -41,7 +44,7 @@ footer {
       justify-content: space-between;
       max-width: 1200px;
       width: 100%;
-      @include max-width(laptop) {
+      @include max-width(tablet) {
         max-width: 100%;
       }
       .infos {
@@ -50,21 +53,34 @@ footer {
         align-items: flex-start;
         justify-content: center;
         gap: 16px;
-        @include max-width(laptop) {
+        @include max-width(tablet) {
           gap: 8px;
         }
         .social-buttons {
-          @include max-width(desktop) {
+          padding-top: 32px;
+          @include max-width(laptop) {
             padding-top: 22px;
           }
-          @include max-width(laptop) {
+          @include max-width(tablet) {
             padding-top: 16px;
           }
         }
         p {
           font-weight: 600;
           @include max-width(laptop) {
-            font-size: 8px;
+            font-size: 12px;
+          }
+          @include max-width(tablet) {
+            font-size: 10px;
+          }
+          a {
+            font-weight: 600;
+            @include max-width(laptop) {
+              font-size: 12px;
+            }
+            @include max-width(tablet) {
+              font-size: 10px;
+            }
           }
         }
       }
@@ -73,16 +89,19 @@ footer {
         flex-direction: column;
         padding: 22px 0px;
         gap: 22px;
-        @include max-width(desktop) {
-          gap: 16px;
+        li {
+          font-weight: 600;
         }
         @include max-width(laptop) {
+          gap: 16px;
+        }
+        @include max-width(tablet) {
           gap: 12px;
           padding: 16px 0px;
         }
         a {
           transition: all 0.3s ease-out;
-          @include max-width(laptop) {
+          @include max-width(tablet) {
             font-size: 0.5rem;
           }
         }

@@ -12,17 +12,17 @@ const SocialsContainer = ({ hasScrollDown } : { hasScrollDown: boolean }) => {
           <div className="buttons">
             <a href="https://www.linkedin.com/in/mdorizon/" target="_blank">
               <div className="button linkedin-button">
-                <IconBrandLinkedin size={30} stroke={1.8} />
+                <IconBrandLinkedin size={30} stroke={2} />
               </div>
             </a>
             <a href="https://github.com/mdorizon" target="_blank">
               <div className="button github-button">
-                <IconBrandGithub size={30} stroke={1.8} />
+                <IconBrandGithub size={30} stroke={2} />
               </div>
             </a>
             <a href="https://dribbble.com/wakusay" target="_blank">
               <div className="button dribbble-button">
-                <IconBrandDribbble size={30} stroke={1.8} />
+                <IconBrandDribbble size={30} stroke={2} />
               </div>
             </a>
           </div>

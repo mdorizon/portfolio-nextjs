@@ -2,7 +2,7 @@
   gap: 96px;
   display: flex;
   justify-content: center;
-  @include max-width(laptop) {
+  @include max-width(tablet) {
     gap: 64px;
   }
   .whoami-text {
@@ -12,10 +12,10 @@
     max-width: 1200px;
     gap: 24px;
     text-align: center;
-    @include max-width(desktop) {
+    @include max-width(laptop) {
       max-width: 700px;
     }
-    @include max-width(laptop) {
+    @include max-width(tablet) {
       max-width: 100%;
       padding: 0 16px;
     }
@@ -26,7 +26,7 @@
       font-weight: 400;
       line-height: 26px;
       opacity: 0.8;
-      @include max-width(desktop) {
+      @include max-width(laptop) {
         line-height: 20px;
       }
     }
