@@ -11,7 +11,7 @@
     max-width: var(--space-sectionSmallMaxWidth);
     width: 100%;
     gap: 32px;
-    align-items: start;
+    align-items: flex-start;
     @include max-width(desktop) {
       max-width: 700px;
     }
@@ -27,7 +27,7 @@
     }
     .sort-buttons {
       display: flex;
-      align-items: start;
+      align-items: flex-start;
       flex-wrap: wrap;
       gap: 19px;
       @include max-width(desktop) {

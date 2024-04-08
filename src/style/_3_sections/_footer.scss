@@ -47,7 +47,7 @@ footer {
       .infos {
         display: flex;
         flex-direction: column;
-        align-items: start;
+        align-items: flex-start;
         justify-content: center;
         gap: 16px;
         @include max-width(laptop) {
