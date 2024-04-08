@@ -1,4 +1,5 @@
 .cta_secondary {
+  transition: all 0.3s ease-in-out;
   padding: 20px 30px;
   gap: 16px;
   cursor: pointer;
@@ -19,21 +20,11 @@
   p {
     font-size: var(--font-size-button);
     font-weight: 600;
-    transition: all 0.3s ease-in-out;
-    @include max-width(desktop) {
-      font-size: 0.625rem;
-    }
-  }
-  i {
-    font-size: 18px;
-    transition: all 0.3s ease-in-out;
     @include max-width(desktop) {
       font-size: 0.625rem;
     }
   }
   &:hover {
-    p, i {
-      opacity: 0.6;
-    }
+    opacity: 0.6;
   }
 }
