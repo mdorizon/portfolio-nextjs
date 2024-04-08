@@ -11,17 +11,15 @@ h1, h2, h3, p, a {
 body {
   background-color: var(--color-background);
   color: var(--color-light);
+}
+body, main {
+  display: flex;
+  flex-direction: column;
   gap: 128px;
-  @include max-width(desktop) {
+  @include max-width(laptop) {
     gap: 96px;
   }
-  @include max-width(laptop) {
-    gap: 48px;
-  }
-}
-main {
-  gap: 128px;
-  @include max-width(laptop) {
+  @include max-width(tablet) {
     gap: 48px;
   }
 }

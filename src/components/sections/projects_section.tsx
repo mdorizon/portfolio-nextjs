@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import PostCard from '@/src/components/postCard';
+import PostCard from '@/src/components/components/postCard';
 import { PostData, PostCategory } from '@/src/utils/lib/definitions'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
