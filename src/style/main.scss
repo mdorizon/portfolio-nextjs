@@ -38,29 +38,6 @@
 // à retirer
 @import 'layout/grid';
 
-
-
-
-
-// Laptop responsive
-@media only screen and (max-width: 1440px){
-  body {
-    gap: 96px;
-  }
-}
-// Laptop responsive END
-
-// Tablet responsive
-@media only screen and (max-width: 768px){
-  body, main {
-    gap: 48px;
-  }
-}
-
-
-
-
-
 // Tablet responsive END
 .dashboard-template {
   display: flex;
