@@ -9,6 +9,7 @@ header {
     justify-content: center;
     z-index: 9999;
     @include max-width(tablet) {
+      transition: .6s all;
       justify-content: flex-end;
       width: 100%;
       position: fixed;
@@ -104,9 +105,18 @@ header {
         height: 24px;
         @include max-width(tablet) {
           display: unset;
+          transition: .6s all;
         }
       }
     }
+  }
+  .d-none {
+    opacity: 0 !important;
+  }
+  .nav-no-bg {
+    background: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
   }
   
   // *---------*

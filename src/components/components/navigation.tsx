@@ -20,7 +20,7 @@ const Navigation: React.FC = () => {
 
   return (
     <>
-      <nav className="navbar">
+      <nav className={`navbar ${isSidenavOpen === true ? 'nav-no-bg' : ''}`}>
         <div className="nav-items">
           {navLinks.map((link) => (
             <a key={link.id} className="nav-item" href={link.href} ><p>{link.text}</p></a>    
@@ -37,7 +37,7 @@ const Navigation: React.FC = () => {
               ))}
             </div>
           </div>
-          <a className="burger-icon" 
+          <a className={`burger-icon ${isSidenavOpen === true ? 'd-none' : ''}`}
           onClick={() => HandleSideNav()}
           >
             <IconMenu2 />
