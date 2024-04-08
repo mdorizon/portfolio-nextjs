@@ -93,7 +93,7 @@ export type InvoiceForm = {
 
 import { IconBrandHtml5, IconBrandSass, IconBrandCss3, IconBrandFigma, IconBrandPhp, IconBrandNextjs, IconBrandAngular } from "@tabler/icons-react";
 
-export const iconComponents = {
+export const iconComponents = {  
   IconBrandFigma: IconBrandFigma,
   IconBrandHtml5: IconBrandHtml5,
   IconBrandSass: IconBrandSass,

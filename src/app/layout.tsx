@@ -1,6 +1,6 @@
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { poppins } from '@/src/style/utils/fonts';
-import '@/src/style/global.scss';
+import { poppins } from '@/src/style/_0_utils/fonts';
+import '@/src/style/main.scss';
 import { Metadata } from 'next';
  
 export const metadata: Metadata = {
