@@ -1,8 +1,9 @@
 'use client';
 
 import SocialsContainer from './socials_buttons';
-import { IconDownload } from '@tabler/icons-react';
 import Image from 'next/image';
+import CtaPrimary from '../ctas/cta_primary';
+import CtaSecondary from '../ctas/cta_secondary';
 
 export default function Banner() {
 
@@ -19,17 +20,8 @@ export default function Banner() {
               <p>Bienvenue sur mon portfolio ! Je suis Maxence Dorizon, un passionné de 19 ans en première année de développement web à l&#39;École Supérieure du Digital (ESD) de Bordeaux. Explorez mon portfolio pour découvrir mon parcours et mes projets.</p>
             </div>
             <div className="header-buttons">
-              <a href="#contact">
-                <div className="contact-me-button">
-                  <p>Contactez moi</p>
-                </div>
-              </a>
-              <a href="/documents/CV.pdf" download>
-                <div className="cv-download">
-                  <p>télécharger CV</p>
-                  <IconDownload />
-                </div>
-              </a>
+              <CtaPrimary link='#contact' text='Contactez moi' />
+              <CtaSecondary link='/documents/CV.pdf' text='télécharger CV' />
             </div>
             <SocialsContainer hasScrollDown={true} />
           </div>

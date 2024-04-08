@@ -1,0 +1,25 @@
+.cta_primary {
+  border-radius: 16px;
+  padding: 20px 30px;
+  cursor: pointer;
+  user-select: none;
+  background: var(--color-primary);
+  transition: 0.3s all ease-in-out;
+  @include max-width(desktop) {
+    padding: 15px 25px;
+  }
+  @include max-width(laptop) {
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+  p {
+    font-size: var(--font-size-button);
+    font-weight: 600;
+    @include max-width(desktop) {
+      font-size: 0.625rem;
+    }
+  }
+  &:hover {
+    background: hsl(235, 98%, 69%);
+  }
+}

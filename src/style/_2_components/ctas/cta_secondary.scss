@@ -1,0 +1,39 @@
+.cta_secondary {
+  padding: 20px 30px;
+  gap: 16px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  svg {
+    @include max-width(desktop) {
+      height: 10px;
+    }
+  }
+  @include max-width(desktop) {
+    padding: 15px 25px;
+  }
+  @include max-width(laptop) {
+    padding: 10px 20px;
+  }
+  p {
+    font-size: var(--font-size-button);
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    @include max-width(desktop) {
+      font-size: 0.625rem;
+    }
+  }
+  i {
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    @include max-width(desktop) {
+      font-size: 0.625rem;
+    }
+  }
+  &:hover {
+    p, i {
+      opacity: 0.6;
+    }
+  }
+}
