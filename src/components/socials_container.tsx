@@ -7,21 +7,21 @@ const SocialsContainer = ({ hasScrollDown } : { hasScrollDown: boolean }) => {
 
   return (
     <>
-      <div className="socials flex align-start">
-        <div className="social-buttons flex flex-dir-col align-center">
-          <div className="buttons flex align-center">
+      <div className="socials">
+        <div className="social-buttons">
+          <div className="buttons">
             <a href="https://www.linkedin.com/in/mdorizon/" target="_blank">
-              <div className="linkedin-button flex justify-center align-center">
+              <div className="button linkedin-button">
                 <IconBrandLinkedin size={30} stroke={1.8} />
               </div>
             </a>
             <a href="https://github.com/mdorizon" target="_blank">
-              <div className="github-button flex justify-center align-center">
+              <div className="button github-button">
                 <IconBrandGithub size={30} stroke={1.8} />
               </div>
             </a>
             <a href="https://dribbble.com/wakusay" target="_blank">
-              <div className="dribbble-button flex justify-center align-center">
+              <div className="button dribbble-button">
                 <IconBrandDribbble size={30} stroke={1.8} />
               </div>
             </a>

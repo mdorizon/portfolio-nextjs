@@ -106,11 +106,11 @@ const Projects: React.FC = () => {
 
   return (
     <>
-      <section className="projects-section flex flex-dir-col align-center" id="projects">
-        <div className="cards-container flex flex-dir-col">
-          <div className="sort-buttons flex align-start wrap">
+      <section className="projects-section" id="projects">
+        <div className="cards-container">
+          <div className="sort-buttons">
             {postsCategories.map((category) => (
-              <div key={category.id} className={`sort-button flex justify-center align-center ${selectedCategory === category.slug ? 'active' : ''}`} onClick={() => handleCategoryChange(category.slug)}>
+              <div key={category.id} className={`sort-button ${selectedCategory === category.slug ? 'active' : ''}`} onClick={() => handleCategoryChange(category.slug)}>
                 <p>{category.text}</p>
               </div>
             ))}

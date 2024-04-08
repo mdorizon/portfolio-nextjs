@@ -12,13 +12,13 @@ export default function Skills() {
 
   return (
     <>
-      <section className="skills-section flex flex-dir-col align-center" id="skills">
-        <div className="skills-container flex flex-dir-col align-center">
+      <section className="skills-section" id="skills">
+        <div className="skills-container">
           <h3 className="skills-title">Mes compétences</h3>
-          <div className="skills-cards flex">
+          <div className="skills-cards">
             {skillsData.map((data) => (
-              <div key={data.id} className="skill-card flex flex-dir-col align-center">
-                <div className="skill-content flex flex-dir-col">
+              <div key={data.id} className="skill-card">
+                <div className="skill-content">
                   <h3>{data.category}</h3>
                   <hr />
                   <ul>

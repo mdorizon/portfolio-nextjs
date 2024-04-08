@@ -12,9 +12,18 @@ body {
   background-color: var(--color-background);
   color: var(--color-light);
   gap: 128px;
+  @include max-width(desktop) {
+    gap: 96px;
+  }
+  @include max-width(laptop) {
+    gap: 48px;
+  }
 }
 main {
   gap: 128px;
+  @include max-width(laptop) {
+    gap: 48px;
+  }
 }
 a {
   all: unset;

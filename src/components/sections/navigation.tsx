@@ -20,8 +20,8 @@ const Navigation: React.FC = () => {
 
   return (
     <>
-      <nav className="navbar flex justify-center">
-        <div className="nav-items flex">
+      <nav className="navbar">
+        <div className="nav-items">
           {navLinks.map((link) => (
             <a key={link.id} className="nav-item" href={link.href} ><p>{link.text}</p></a>    
           ))}
@@ -29,7 +29,7 @@ const Navigation: React.FC = () => {
             <a className="close" 
             onClick={() => HandleSideNav()}
             >&times;</a>
-            <div className="burger-nav-items flex flex-dir-col">
+            <div className="burger-nav-items">
               {navLinks.map((link) => (
                 <a key={link.id} className="burger-nav-item" href={link.href} onClick={() => HandleSideNav()}>
                   <li>{link.text}</li>
