@@ -58,9 +58,6 @@
     width: 350px;
     height: 350px;
   }
-  .nav-items a {
-    font-size: 0.625rem;
-  }
   .figma-icon {
     width: 20px;
     height: 35px;
@@ -199,24 +196,6 @@
 @media only screen and (max-width: 768px){
   body, main {
     gap: 48px;
-  }
-  .nav-item {
-    display: none;
-  }
-  .burger-icon {
-    display: unset;
-  }
-  .navbar {
-    justify-content: flex-end;
-    width: 100%;
-    .nav-items {
-      padding: var(--space-md);
-    }
-  }
-  .burger-nav-items {
-    .burger-nav-item {
-      font-size: 0.875rem;
-    }
   }
   .header-content {
     padding: var(--space-8xl) 0;
