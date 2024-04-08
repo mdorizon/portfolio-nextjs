@@ -34,7 +34,7 @@ export default function Banner() {
             <SocialsContainer hasScrollDown={true} />
           </div>
           <div className="right-content">
-            <Image src="/images/logo.jpg" alt="header-logo" className="header-logo" width={400} height={400} />
+            <Image src="/images/logo.webp" alt="header-logo" className="header-logo" width={400} height={400} />
             <div className="logo logo-figma">
               <Image src="/icons/figma-icon.svg" alt="figma-icon" className="figma-icon" width={30} height={45} />
             </div>
