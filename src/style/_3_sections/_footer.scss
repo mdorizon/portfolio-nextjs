@@ -1,38 +1,95 @@
 footer {
+  display: flex;
+  flex-direction: column;
   gap: 96px;
-}
-.contact-container {
-  max-width: 1200px;
-  gap: 24px;
-  padding-top: 32px;
-  h3 {
-    color: var(--color-secondary);
+  @include max-width(laptop) {
+    gap: 48px;
   }
-  h1 {
-    text-align: center;
-  }
-}
-.footer-links {
-  background: var(--color-grey-primary);
-  padding: 32px 64px;
-  .footer-container {
-    max-width: 1200px;
-    width: 100%;
-    .nav-items {
-      padding: 22px 0px;
-      gap: 22px;
-    }
-    .nav-items a {
-      transition: all 0.3s ease-out;
-    }
-    .nav-items a:hover {
-      opacity: 0.6;
+  .contact-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .contact-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 1200px;
+      gap: 24px;
+      padding-top: 32px;
+      h3 {
+        color: var(--color-secondary);
+      }
+      h1 {
+        text-align: center;
+      }
     }
   }
-  .infos {
-    gap: 16px;
-    p {
-      font-weight: 600;
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-grey-primary);
+    padding: 32px 64px;
+    @include max-width(desktop) {
+      padding: 22px 34px;
+    }
+    @include max-width(laptop) {
+      padding: 14px 18px;
+    }
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      max-width: 1200px;
+      width: 100%;
+      @include max-width(laptop) {
+        max-width: 100%;
+      }
+      .infos {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        gap: 16px;
+        @include max-width(laptop) {
+          gap: 8px;
+        }
+        .social-buttons {
+          @include max-width(desktop) {
+            padding-top: 22px;
+          }
+          @include max-width(laptop) {
+            padding-top: 16px;
+          }
+        }
+        p {
+          font-weight: 600;
+          @include max-width(laptop) {
+            font-size: 8px;
+          }
+        }
+      }
+      .nav-items {
+        display: flex;
+        flex-direction: column;
+        padding: 22px 0px;
+        gap: 22px;
+        @include max-width(desktop) {
+          gap: 16px;
+        }
+        @include max-width(laptop) {
+          gap: 12px;
+          padding: 16px 0px;
+        }
+        a {
+          transition: all 0.3s ease-out;
+          @include max-width(laptop) {
+            font-size: 0.5rem;
+          }
+        }
+        a:hover {
+          opacity: 0.6;
+        }
+      }
     }
   }
 }

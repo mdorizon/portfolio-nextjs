@@ -94,17 +94,6 @@
       font-size: 1.125rem;
     }
   }
-  footer {
-    .footer-links {
-      padding: 22px 34px;
-      .social-buttons {
-        padding-top: 22px;
-      }
-      .footer-container .nav-items {
-        gap: 16px;
-      }
-    }
-  }
 }
 // Laptop responsive END
 
@@ -170,34 +159,6 @@
           gap: 12px;
           li {
             font-size: 0.625rem;
-          }
-        }
-      }
-    }
-  }
-  footer {
-    gap: 48px;
-    .footer-links {
-      padding: 14px 18px;
-      .footer-container {
-        max-width: 100%;
-        .nav-items {
-          gap: 12px;
-          padding: 16px 0px;
-          a {
-            font-size: 0.5rem;
-          }
-        }
-        .infos {
-          gap: 8px;
-          p {
-            font-size: 8px;
-          }
-          .social-buttons {
-            padding-top: 16px;
-            .buttons {
-              gap: 8px;
-            }
           }
         }
       }
