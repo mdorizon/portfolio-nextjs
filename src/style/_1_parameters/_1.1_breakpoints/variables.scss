@@ -14,8 +14,9 @@ $mockups-widths: (
 // @mixin max-width(breakpoint) will depending on next breakpoint starting width -1
   
 $breakpoints: ( 
-    mobile              : 0,
-    tablet              : 381,
-    laptop              : 768,
-    desktop             : 1440,
+  mobile              : 0,
+  tablet              : 381,
+  laptop              : 768,
+  desktop             : 1440,
+  dontuse             : 1920,
 );

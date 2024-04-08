@@ -1,23 +1,44 @@
 @use "sass:math";
 
+
+// swiper js styles
 @import 'swiper/scss', 'swiper/scss/navigation', 'swiper/scss/pagination';
 
-@import 'utils/breakpoints/variables.scss';
-@import 'utils/breakpoints/functions.scss';
 
-@import 'utils/sizes/functions.scss';
+// utils
+@import '_0_utils/0.1_reset';
+@import '_0_utils/0.2_scrollbar';
 
-@import 
-'sections/header',
-'layout/grid',
-'utils/colors',
-'sections/whoami',
-'sections/skills',
-'sections/footer',
-'sections/project',
-'utils/reset',
-'utils/scrollbar',
-'components/socials_container';
+
+// parameters
+@import '_1_parameters/_1.1_breakpoints/variables.scss';
+@import '_1_parameters/_1.1_breakpoints/functions.scss';
+@import '_1_parameters/_1.2_sizes/functions.scss';
+@import '_1_parameters/_1.3_fonts/variables.scss';
+@import '_1_parameters/_1.4_colors/variables.scss';
+@import '_1_parameters/_1.5_layouts/variables.scss';
+
+
+// components
+@import '_2_components/socials_container.scss';
+
+
+// sections
+@import '_3_sections/footer';
+@import '_3_sections/header';
+@import '_3_sections/project';
+@import '_3_sections/skills';
+@import '_3_sections/whoami';
+
+
+// pages
+
+
+// à retirer
+@import 'layout/grid';
+
+
+
 
 
 // Laptop responsive
@@ -66,17 +87,8 @@
     bottom: 26px;
     right: -10px;
   }
-  .title-container {
-    h1 {
-      font-size: 2.125rem;
-    }
-    h2 {
-      font-size: 1.375rem;
-    }   
-  }
   .header-text {
     p {
-      font-size: 0.625rem;
       line-height: 16px;
     }
   }
@@ -123,11 +135,7 @@
   }
   .whoami-text {
     max-width: 700px;
-    h3 {
-      font-size: 1.125rem;
-    }
     p {
-      font-size: 0.625rem;
       line-height: 20px;
     }
   }
@@ -138,9 +146,6 @@
     gap: 12px;
     .sort-button {
       padding: 6px 12px;
-      p {
-        font-size: 0.625rem;
-      }
     }
   }
   .cards {
@@ -151,18 +156,9 @@
     .card {
       .card-content {
         gap: 20px;
-        h3 {
-          font-size: 1rem;
-        }
-        p {
-          font-size: 0.625rem;
-        }
         .skill .skill-content {
           img {
             width: 14px;
-          }
-          p {
-            font-size: 0.625rem;
           }
         }
       }
@@ -177,11 +173,6 @@
           padding: 8px 12px;
         }
       }
-      .category-tag {
-        p {
-          font-size: 0.625rem;
-        }
-      }
     }
   }
   .skills-container {
@@ -189,30 +180,12 @@
     .skills-title {
       font-size: 1.125rem;
     }
-    .skills-cards {
-      .skill-content {
-        h3 {
-          font-size: 1.125rem;
-        }
-      }
-    }
   }
   footer {
-    .contact-container {
-      h3 {
-        font-size: 1.125rem;
-      }
-      h1 {
-        font-size: 2rem;
-      }
-    }
     .footer-links {
       padding: 22px 34px;
       .social-buttons {
         padding-top: 22px;
-      }
-      .infos p {
-        font-size: 12px;
       }
       .footer-container .nav-items {
         gap: 16px;
@@ -295,16 +268,7 @@
       }
       .left-content {
         gap: 40px;
-        .title-container {
-          h2 {
-            font-size: 1.125rem;
-          }
-          h1 {
-            font-size: 1.625rem;
-          }
-        }
         .header-text p {
-          font-size: 0.5rem;
           padding: 0 16px;
         }
         .header-buttons {
@@ -312,9 +276,6 @@
           .contact-me-button {
             padding: 10px 20px;
             border-radius: 8px;
-            p {
-              font-size: 0.625rem;
-            }
           }
           .cv-download {
             padding: 10px 20px;
@@ -405,12 +366,6 @@
     .whoami-text {
       max-width: 100%;
       padding: 0 16px;
-      h3 {
-        font-size: 1rem;
-      }
-      p {
-        font-size: 0.5rem;
-      }
     }
   }
   .projects-section {
@@ -422,9 +377,6 @@
         gap: 8px;
         .sort-button {
           padding: 4px 10px;
-          p {
-            font-size: 0.5rem;
-          }
         }
       }
       .cards {
@@ -464,9 +416,6 @@
       .skill-card {
         .skill-content {
           gap: 12px;
-          h3 {
-            font-size: 0.875rem;
-          }
           li {
             font-size: 0.625rem;
           }
@@ -476,14 +425,6 @@
   }
   footer {
     gap: 48px;
-    .contact-container {
-      h3 {
-        font-size: 0.875rem;
-      }
-      h1 {
-        font-size: 1.375rem;
-      }
-    }
     .footer-links {
       padding: 14px 18px;
       .footer-container {

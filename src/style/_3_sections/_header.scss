@@ -9,7 +9,6 @@
   padding: var(--space-4xl) 0;
   gap: var(--space-4xl);
   a {
-    font-size: var(--font-size-text);
     font-weight: 600;
   }
   p {
@@ -130,18 +129,11 @@
 .title-container {
   h2 {
     color: var(--color-secondary);
-    font-size: var(--font-size-h2);
-    font-weight: 600;
-  }
-  h1 {
-    font-size: var(--font-size-h1);
-    font-weight: 600;
   }
 }
 .header-text {
   gap: 15px;
   p {
-    font-size: var(--font-size-text);
     font-weight: 300;
     line-height: 28px;
     opacity: 0.5;

@@ -8,13 +8,13 @@
 // @include min-width(mobile) will generate @media (min-width: 0px) {...}
 // @include min-width(tablet) will generate @media (min-width: 481px) {...}
 @mixin min-width($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-      @media (min-width: #{map-get($breakpoints, $breakpoint) * 1px}) {
-          @content;
-      }
-  } @else {
-      @error "Unknown breakpoint: #{$breakpoint}.";
-  }
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: #{map-get($breakpoints, $breakpoint) * 1px}) {
+            @content;
+        }
+    } @else {
+        @error "Unknown breakpoint: #{$breakpoint}.";
+    }
 }
 
 
@@ -28,21 +28,21 @@
 // @include max-width(mobile) will generate @media (max-width: 480px) {...}
 // @include max-width(tablet) will generate @media (max-width: 1023px) {...}
 @mixin max-width($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-      $keys: map-keys($breakpoints);
-      $index: index($keys, $breakpoint);
+    @if map-has-key($breakpoints, $breakpoint) {
+        $keys: map-keys($breakpoints);
+        $index: index($keys, $breakpoint);
 
-      @if $index < length($keys) {
-          $next-breakpoint: nth($keys, $index + 1);
-          $max-width: map-get($breakpoints, $next-breakpoint) - 1;
+        @if $index < length($keys) {
+            $next-breakpoint: nth($keys, $index + 1);
+            $max-width: map-get($breakpoints, $next-breakpoint) - 1;
 
-          @media (max-width: #{$max-width * 1px}) {
-              @content;
-          }
-      } @else {
-          @error "No next breakpoint found for #{$breakpoint}.";
-      }
-  } @else {
-      @error "Unknown breakpoint: #{$breakpoint}.";
-  }
+            @media (max-width: #{$max-width * 1px}) {
+                @content;
+            }
+        } @else {
+            @error "No next breakpoint found for #{$breakpoint}.";
+        }
+    } @else {
+        @error "Unknown breakpoint: #{$breakpoint}.";
+    }
 }
