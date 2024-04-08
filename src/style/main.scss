@@ -3,6 +3,8 @@
 
 // swiper js styles
 @import 'swiper/scss', 'swiper/scss/navigation', 'swiper/scss/pagination';
+@import '_1_parameters/_1.1_breakpoints/variables.scss';
+@import '_1_parameters/_1.1_breakpoints/functions.scss';
 
 
 // utils
@@ -11,8 +13,6 @@
 
 
 // parameters
-@import '_1_parameters/_1.1_breakpoints/variables.scss';
-@import '_1_parameters/_1.1_breakpoints/functions.scss';
 @import '_1_parameters/_1.2_sizes/functions.scss';
 @import '_1_parameters/_1.3_fonts/variables.scss';
 @import '_1_parameters/_1.4_colors/variables.scss';
@@ -33,23 +33,4 @@
 
 
 // pages
-
-
-// à retirer
-@import 'layout/grid';
-
-// Tablet responsive END
-.dashboard-template {
-  display: flex;
-  gap: 0;
-  .admin-navigation {
-    max-width: 300px;
-    width: 100%;
-    background-color: red;
-  }
-  
-  .admin-home {
-    width: 100%;
-    background-color: blue;
-  }
-}
+@import '_4_pages/dashboard.scss';
