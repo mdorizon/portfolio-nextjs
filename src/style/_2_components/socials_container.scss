@@ -2,3 +2,29 @@
   user-select: none;
   gap: 32px;
 }
+.arrow {
+  padding: 10px 20px;
+  transition: 0.3s all ease-out;
+  animation: arrow 1s ease-in-out infinite alternate;
+}
+.buttons {
+  gap: 20px;
+  div {
+    width: 45px;
+    height: 45px;
+    border-radius: 26px;
+    border: 2.5px solid var(--color-light);
+    transition: 0.3s all ease-out;
+  }
+  div:hover {
+    opacity: 0.6;
+  }
+}
+@keyframes arrow {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(30px);
+  }
+}

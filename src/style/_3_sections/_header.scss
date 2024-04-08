@@ -93,6 +93,8 @@ header {
         }
       }
       .burger-icon {
+        display: none;
+        height: 24px;
         @include max-width(laptop) {
           display: unset;
         }
@@ -106,82 +108,291 @@ header {
 
   .header-content {
     padding: var(--space-13xl) 0px;
+    display: flex;
+    justify-content: center;
+    @include max-width(laptop) {
+      padding: var(--space-8xl) 0;
+    }
+    .container {
+      display: flex;
+      align-items: center;
+      max-width: var(--space-sectionSmallMaxWidth);
+      gap: var(--space-13xl);
+      @include max-width(desktop) {
+        flex-direction: column-reverse;
+        max-width: 700px;
+      }
+      @include max-width(laptop) {
+        max-width: 100%;
+        width: 100%;
+      }
+      .left-content {
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        @include max-width(desktop) {
+          align-items: center;
+          text-align: center;
+        }
+        @include max-width(laptop) {
+          gap: 40px;
+        }
+        .header-text {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+          p {
+            font-weight: 300;
+            line-height: 28px;
+            opacity: 0.5;
+            @include max-width(desktop) {
+              line-height: 16px;
+            }
+            @include max-width(laptop) {
+              padding: 0 16px;
+            }
+          }
+          .title-container {
+            h2 {
+              color: var(--color-secondary);
+            }
+          }
+        }
+        .header-buttons {
+          display: flex;
+          align-items: center;
+          gap: 40px;
+          @include max-width(laptop) {
+            gap: 30px;
+          }
+          .contact-me-button {
+            border-radius: 16px;
+            padding: 20px 30px;
+            cursor: pointer;
+            user-select: none;
+            background: var(--color-primary);
+            transition: 0.3s all ease-in-out;
+            @include max-width(desktop) {
+              padding: 15px 25px;
+            }
+            @include max-width(laptop) {
+              padding: 10px 20px;
+              border-radius: 8px;
+            }
+            p {
+              font-size: var(--font-size-button);
+              font-weight: 600;
+              @include max-width(desktop) {
+                font-size: 0.625rem;
+              }
+            }
+          }
+          .contact-me-button:hover {
+            background: hsl(235, 98%, 69%);
+          }
+          .cv-download {
+            padding: 20px 30px;
+            gap: 16px;
+            cursor: pointer;
+            user-select: none;
+            display: flex;
+            align-items: center;
+            svg {
+              @include max-width(desktop) {
+                height: 10px;
+              }
+            }
+            @include max-width(desktop) {
+              padding: 15px 25px;
+            }
+            @include max-width(laptop) {
+              padding: 10px 20px;
+            }
+            p {
+              font-size: var(--font-size-button);
+              font-weight: 600;
+              transition: all 0.3s ease-in-out;
+              @include max-width(desktop) {
+                font-size: 0.625rem;
+              }
+            }
+            i {
+              font-size: 18px;
+              transition: all 0.3s ease-in-out;
+              @include max-width(desktop) {
+                font-size: 0.625rem;
+              }
+            }
+          }
+          .cv-download:hover {
+            p, i {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+      .right-content {
+        position: relative;
+        .header-logo {
+          width: 400px;
+          height: 400px;
+          border-radius: 400px;
+          box-shadow: 0px 27px 75px 29px rgba(82, 96, 255, 0.22);
+          user-select: none;
+          @include max-width(desktop) {
+            width: 350px;
+            height: 350px;
+          }
+          @include max-width(laptop) {
+            width: 250px;
+            height: 250px;
+            box-shadow: 0px 17px 25px 19px rgba(82, 96, 255, 0.10);
+          }
+        }
+        .logo-figma {
+          bottom: 39px;
+          left: -10px;
+          width: 85px;
+          height: 85px;
+          animation: floatFigma 2s ease-in-out infinite alternate;
+          @include max-width(laptop) {
+            animation: floatFigma 2.5s ease-in-out infinite alternate;
+            width: 40px;
+            height: 40px;
+          }
+          @include max-width(desktop) {
+            width: 60px;
+            height: 60px;
+          }
+          .figma-icon {
+            width: 30px;
+            height: 45px;
+            @include max-width(desktop) {
+              width: 20px;
+              height: 35px;
+            }
+            @include max-width(laptop) {
+              width: 15px;
+              height: 30px;
+            }
+          }
+        }
+        .logo-tailwind {
+          bottom: 51px;
+          right: 5px;
+          width: 85px;
+          height: 85px;
+          animation: floatTailwind 3s ease-in-out infinite alternate;
+          @include max-width(desktop) {
+            width: 60px;
+            height: 60px;
+          }
+          @include max-width(laptop) {
+            animation: floatTailwind 3.5s ease-in-out infinite alternate;
+            width: 40px;
+            height: 40px;
+          }
+          .tailwind-icon {
+            width: 51px;
+            height: 30px;
+            @include max-width(desktop) {
+              width: 39px;
+              height: 20px;
+            }
+            @include max-width(laptop) {
+              width: 34px;
+              height: 15px;
+            }
+          }
+        }
+        .logo-sass {
+          top: -34px;
+          right: 82px;
+          width: 85px;
+          height: 85px;
+          animation: floatSass 2.5s ease-in-out infinite alternate;
+          @include max-width(desktop) {
+            width: 60px;
+            height: 60px;
+          }
+          @include max-width(laptop) {
+            animation: floatSass 3s ease-in-out infinite alternate;
+            width: 40px;
+            height: 40px;
+          }
+          .sass-icon {
+            width: 54px;
+            height: 40px;
+            @include max-width(desktop) {
+              width: 44px;
+              height: 30px;
+            }
+            @include max-width(laptop) {
+              width: 34px;
+              height: 20px;
+            }
+          }
+        }
+        .logo-vscode {
+          width: 49px;
+          height: 49px;
+          bottom: 11px;
+          right: -25px;
+          animation: floatVscode 3s ease-in-out infinite alternate;
+          @include max-width(desktop) {
+            width: 29px;
+            height: 29px;
+            bottom: 26px;
+            right: -10px;
+          }
+          @include max-width(laptop) {
+            animation: floatVscode 3.5s ease-in-out infinite alternate;
+            width: 19px;
+            height: 19px;
+            bottom: 33px;
+            right: -3px;
+          }
+          .vscode-icon {
+            width: 24px;
+            height: 24px;
+            @include max-width(desktop) {
+              width: 14px;
+              height: 14px;
+            }
+            @include max-width(laptop) {
+              width: 9px;
+              height: 9px;
+            }
+          }
+        }
+        .logo {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background-color: #FFF;
+          box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+          border-radius: 56px;
+          position: absolute;
+          user-select: none;
+        }
+      }
+    }
   }
 }
 
+// *---------------*
+// *   animations  *
+// *---------------*
 
-
-
-.container {
-  max-width: var(--space-sectionSmallMaxWidth);
-  gap: var(--space-13xl);
-}
-.header-logo {
-  width: 400px;
-  height: 400px;
-  border-radius: 400px;
-  box-shadow: 0px 27px 75px 29px rgba(82, 96, 255, 0.22);
-  user-select: none;
-}
-.right-content {
-  position: relative;
-}
-.logo-figma,
-.logo-tailwind,
-.logo-sass,
-.logo-vscode {
-  background-color: #FFF;
-  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 56px;
-  width: 85px;
-  height: 85px;
-  position: absolute;
-  user-select: none;
-}
-.logo-figma {
-  bottom: 39px;
-  left: -10px;
-  animation: floatFigma 2s ease-in-out infinite alternate;
-}
-.logo-tailwind {
-  bottom: 51px;
-  right: 5px;
-  animation: floatTailwind 3s ease-in-out infinite alternate;
-}
-.logo-sass {
-  top: -34px;
-  right: 82px;
-  animation: floatSass 2.5s ease-in-out infinite alternate;
-}
-.logo-vscode {
-  width: 49px;
-  height: 49px;
-  bottom: 11px;
-  right: -25px;
-  animation: floatVscode 3s ease-in-out infinite alternate;
-}
-.figma-icon {
-  width: 30px;
-  height: 45px;
-}
-.tailwind-icon {
-  width: 51px;
-  height: 30px;
-}
-.sass-icon {
-  width: 54px;
-  height: 40px;
-}
-.vscode-icon {
-  width: 24px;
-  height: 24px;
-}
 @keyframes floatFigma {
   from {
     transform: translate(0, 0);
   }
   to {
     transform: translate(-5px, 5px);
+    @include max-width(laptop) {
+      transform: translate(-4px, 4px);
+    }
   }
 }
 @keyframes floatTailwind {
@@ -190,6 +401,9 @@ header {
   }
   to {
     transform: translate(5px, 5px);
+    @include max-width(laptop) {
+      transform: translate(4px, 4px);
+    }
   }
 }
 @keyframes floatSass {
@@ -198,6 +412,9 @@ header {
   }
   to {
     transform: translate(5px, -5px);
+    @include max-width(laptop) {
+      transform: translate(4px, -4px);
+    }
   }
 }
 @keyframes floatVscode {
@@ -206,89 +423,8 @@ header {
   }
   to {
     transform: translate(5px, 12px);
-  }
-}
-.left-content {
-  gap: 80px;
-}
-.title-container {
-  h2 {
-    color: var(--color-secondary);
-  }
-}
-.header-text {
-  gap: 15px;
-  p {
-    font-weight: 300;
-    line-height: 28px;
-    opacity: 0.5;
-  }
-}
-.header-buttons {
-  gap: 40px;
-  .contact-me-button {
-    border-radius: 16px;
-    padding: 20px 30px;
-    cursor: pointer;
-    user-select: none;
-    background: var(--color-primary);
-    transition: 0.3s all ease-in-out;
-    p {
-      font-size: var(--font-size-button);
-      font-weight: 600;
+    @include max-width(laptop) {
+      transform: translate(3px, 9px);
     }
   }
-  .contact-me-button:hover {
-    background: hsl(235, 98%, 69%);
-  }
-  .cv-download {
-    padding: 20px 30px;
-    gap: 16px;
-    cursor: pointer;
-    user-select: none;
-    p {
-      font-size: var(--font-size-button);
-      font-weight: 600;
-      transition: all 0.3s ease-in-out;
-    }
-    i {
-      font-size: 18px;
-      transition: all 0.3s ease-in-out;
-    }
-  }
-  .cv-download:hover {
-    p, i {
-      opacity: 0.6;
-    }
-  }
-}
-.arrow {
-  padding: 10px 20px;
-  transition: 0.3s all ease-out;
-  animation: arrow 1s ease-in-out infinite alternate;
-}
-@keyframes arrow {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(30px);
-  }
-}
-.buttons {
-  gap: 20px;
-  div {
-    width: 45px;
-    height: 45px;
-    border-radius: 26px;
-    border: 2.5px solid var(--color-light);
-    transition: 0.3s all ease-out;
-  }
-  div:hover {
-    opacity: 0.6;
-  }
-}
-.burger-icon {
-  display: none;
-  height: 24px;
 }
