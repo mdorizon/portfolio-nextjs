@@ -2,6 +2,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
+    "postinstall": "prisma generate",
     "dev": "next dev",
     "prettier": "prettier --write --ignore-unknown .",
     "prettier:check": "prettier --check --ignore-unknown .",
@@ -10,6 +11,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "^5.12.1",
     "@tabler/icons-react": "^3.1.0",
     "@types/node": "20.5.7",
     "@vercel/postgres": "^0.5.1",
@@ -38,6 +40,7 @@
     "eslint-config-prettier": "9.0.0",
     "postcss": "8.4.31",
     "prettier": "^3.0.3",
+    "prisma": "^5.12.1",
     "sass": "^1.71.1",
     "tailwindcss": "^3.4.1"
   },
