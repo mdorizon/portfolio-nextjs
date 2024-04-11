@@ -61,14 +61,3 @@ export interface NavLinks {
   href: string;
   text: string;
 }
-
-// Skills section 
-
-export interface SkillsProps {
-  skill: string;
-}
-export interface Skills {
-  id: number;
-  category: string;
-  skills: Array<SkillsProps>
-}

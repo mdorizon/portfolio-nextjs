@@ -1,16 +1,14 @@
-'use server'
-
 import { fetchSkills } from "@/src/utils/lib/data";
 
 export default async function Skills() {
-  const skills = await fetchSkills();
+  const skillsDatas = await fetchSkills();
   return (
     <>
       <section className="skills-section" id="skills">
         <div className="skills-container">
           <h3 className="skills-title">Mes compétences</h3>
           <div className="skills-cards">
-            {skills.map((data) => (
+            {skillsDatas.map((data) => (
               <div key={data.id} className="skill-card">
                 <div className="skill-content">
                   <h3>{data.category}</h3>

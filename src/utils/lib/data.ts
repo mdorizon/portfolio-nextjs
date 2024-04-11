@@ -1,28 +1,33 @@
-import { sql } from '@vercel/postgres';
-import { unstable_noStore as noStore } from 'next/cache';
-import {
-  Skills,
-} from './definitions';
+import { PrismaClient } from '@prisma/client'
+
+const prisma = new PrismaClient()
 
 export async function fetchSkills() {
-  try {
-    const data = await sql<Skills>`
-    SELECT 
-      c.id, 
-      c.category, 
-      json_agg(json_build_object('skill', s.skill)) AS skills
-    FROM 
-      skillcategories c
-    JOIN 
-      skills s ON c.id = s.category_id
-    GROUP BY 
-      c.id, c.category;
-    `;
-
-    const skill = data.rows;
-    return skill;
-  } catch (error) {
-    console.error('Database Error:', error)
-    throw new Error('Failed to fetch skills data.');
-  }
+  const skillsDatas = await prisma.skillcategories.findMany({
+    orderBy: [
+      {
+        id: 'desc',
+      }
+    ],
+    select: {
+      id: true,
+      category: true,
+      skills: {
+        select: {
+          skill: true,
+        }
+      }
+    }
+  })
+  return skillsDatas;
 }
+
+fetchSkills()
+  .then(async () => {
+    await prisma.$disconnect()
+  })
+  .catch(async (e) => {
+    console.error(e)
+    await prisma.$disconnect()
+    process.exit(1)
+  })

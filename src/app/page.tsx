@@ -4,7 +4,6 @@ import Whoami from "../components/sections/whoami_section";
 import Projects from "../components/sections/projects_section";
 import Skills from "../components/sections/skills_section";
 
-
 export default function Page() {
   return (
     <body className="home-page">

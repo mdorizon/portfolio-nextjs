@@ -1,6 +1,5 @@
 'use client';
 
-
 import SocialsContainer from "../components/socials_buttons";
 import { navLinks } from "../components/navigation";
 
