@@ -5,7 +5,7 @@ import { Metadata } from 'next';
  
 export const metadata: Metadata = {
   title: 'Maxence Dorizon',
-  description: 'Portfolio de Maxence Dorizon',
+  description: '👋 Je suis Maxence Dorizon, étudiant passionné par l\'informatique à Bordeaux, explorant activement le développement et la sécurité numérique. 🚀💻',
 };
 
 export default function RootLayout({
