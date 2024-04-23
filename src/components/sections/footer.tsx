@@ -12,14 +12,14 @@ export default function Footer() {
           <div className="contact-container">
             <h3>Me contacter</h3>
             <div className="contact">
-              <h1 className="text-copy">mdorizon17@gmail.com</h1>
+              <h1 className="text-copy">contact@mdorizon.fr</h1>
             </div>
           </div>
         </div>
         <div className="footer-links">
           <div className="footer-container">
             <div className="infos">
-              <p>MAIL : <span className="text-copy">mdorizon17@gmail.com</span></p>
+              <p>MAIL : <span className="text-copy">contact@mdorizon.fr</span></p>
               <p>TEL : <a className="tel-hover" href="tel:+33768501007">+33 7 68 50 10 07</a></p>
               <SocialsContainer hasScrollDown={false} />
             </div>
