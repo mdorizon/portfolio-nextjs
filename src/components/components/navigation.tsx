@@ -29,13 +29,13 @@ const Navigation: React.FC = () => {
             <div className="close" 
             onClick={() => HandleSideNav()}
             >&times;</div>
-            <div className="burger-nav-items">
+            <ul className="burger-nav-items">
               {navLinks.map((link) => (
                 <a key={link.id} className="burger-nav-item" href={link.href} onClick={() => HandleSideNav()}>
                   <li>{link.text}</li>
                 </a> 
               ))}
-            </div>
+            </ul>
           </div>
           <div className={`burger-icon ${isSidenavOpen === true ? 'd-none' : ''}`}
           onClick={() => HandleSideNav()}
