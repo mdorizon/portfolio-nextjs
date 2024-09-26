@@ -26,9 +26,9 @@ const Navigation: React.FC = () => {
             <a key={link.id} className="nav-item" href={link.href} ><p>{link.text}</p></a>    
           ))}
           <div className={`sidenav ${isSidenavOpen === true ? 'active' : ''}`}>
-            <a className="close" 
+            <div className="close" 
             onClick={() => HandleSideNav()}
-            >&times;</a>
+            >&times;</div>
             <div className="burger-nav-items">
               {navLinks.map((link) => (
                 <a key={link.id} className="burger-nav-item" href={link.href} onClick={() => HandleSideNav()}>
