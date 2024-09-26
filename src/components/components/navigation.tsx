@@ -37,11 +37,11 @@ const Navigation: React.FC = () => {
               ))}
             </div>
           </div>
-          <a className={`burger-icon ${isSidenavOpen === true ? 'd-none' : ''}`}
+          <div className={`burger-icon ${isSidenavOpen === true ? 'd-none' : ''}`}
           onClick={() => HandleSideNav()}
           >
             <IconMenu2 />
-          </a>
+          </div>
         </div>
       </nav>
     </>
