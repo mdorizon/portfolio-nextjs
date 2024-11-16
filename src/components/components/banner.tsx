@@ -17,7 +17,7 @@ export default function Banner() {
                 <h2>Hey, je suis Maxence DORIZON</h2>
                 <h1>Développeur front-end</h1>
               </div>
-              <p>Bienvenue sur mon portfolio ! Je suis Maxence Dorizon, un passionné de 19 ans en première année de développement web à l&#39;École Supérieure du Digital (ESD) de Bordeaux. Explorez mon portfolio pour découvrir mon parcours et mes projets.</p>
+              <p>Bienvenue sur mon portfolio ! Je suis Maxence Dorizon, un passionné de 20 ans en deuxième année de développement web à l&#39;École Supérieure du Digital (ESD) de Bordeaux. Explorez mon portfolio pour découvrir mon parcours et mes projets.</p>
             </div>
             <div className="header-buttons">
               <CtaPrimary link='#contact' text='Contactez moi' />
