@@ -2,7 +2,7 @@
 // Post Cards Interfaces //
 //-----------------------//
 
-import { IconBrandHtml5, IconBrandSass, IconBrandCss3, IconBrandFigma, IconBrandPhp, IconBrandNextjs, IconBrandAngular } from "@tabler/icons-react";
+import { IconBrandHtml5, IconBrandSass, IconBrandCss3, IconBrandFigma, IconBrandPhp, IconBrandNextjs, IconBrandAngular, IconApi, IconLayoutNavbarFilled } from "@tabler/icons-react";
 
 export const iconComponents = {  
   IconBrandFigma: IconBrandFigma,
@@ -12,6 +12,8 @@ export const iconComponents = {
   IconBrandPhp: IconBrandPhp,
   IconBrandNextjs: IconBrandNextjs,
   IconBrandAngular: IconBrandAngular,
+  IconApi: IconApi,
+  IconLayoutNavbarFilled: IconLayoutNavbarFilled,
 };
 
 export type IconName = keyof typeof iconComponents;

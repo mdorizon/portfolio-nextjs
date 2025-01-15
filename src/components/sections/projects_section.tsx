@@ -26,7 +26,7 @@ const postsData: PostData[] = [
     imageUrl: "/images/real_customer.webp",
     projectButton: { url: "https://github.com/mdorizon/jessica_aroztegui", enabled: true },
     button2: { text: "Voir plus", url: "https://aroztegui.mdorizon.fr/", enabled: true },
-    category: "Intégration",
+    category: "Front-End",
     technologies: [
       {text: 'HTML', icon: 'IconBrandHtml5'},
       {text: 'CSS', icon: 'IconBrandCss3'}
@@ -39,7 +39,7 @@ const postsData: PostData[] = [
     imageUrl: "/images/foodies.webp",
     projectButton: { url: "https://github.com/mdorizon/foodies-landing-training", enabled: true },
     button2: { text: "Voir plus", url: "https://foodies.mdorizon.fr/", enabled: true },
-    category: "Intégration",
+    category: "Front-End",
     technologies: [
       {text: 'HTML', icon: 'IconBrandHtml5'},
       {text: 'CSS', icon: 'IconBrandCss3'}
@@ -47,50 +47,72 @@ const postsData: PostData[] = [
   },
   {
     id: 4,
-    title: "Projet découverte de l'intégration",
-    subtitle: "Cette intégration est la toute première que nous avions à faire, elle nous as fait découvrir les bases de l'HTML et CSS !",
-    imageUrl: "/images/travee.webp",
-    projectButton: { url: "https://github.com/mdorizon/Travee-training", enabled: true },
-    button2: { text: "Voir plus", url: "https://travee.mdorizon.fr/", enabled: true },
-    category: "Intégration",
+    title: "Cabinet Martin, Les briefs créatifs",
+    subtitle: "Le Cabinet Martin est un projet de design réalisé dans le cadre du jeu 'les Briefs Créatifs', voici donc la single page présentant le projet ( les couleurs, typos, et inspirations du projet )",
+    imageUrl: "/images/CabinetMartinImage.webp",
+    projectButton: { url: "https://dribbble.com/shots/25280284-Brand-Board-Cabinet-Martin-les-briefs-cr-atifs?utm_source=Clipboard_Shot&utm_campaign=MDorizon&utm_content=Brand%20Board%20(Cabinet%20Martin%2C%20les%20briefs%20cr%C3%A9atifs)&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=MDorizon&utm_content=Brand%20Board%20(Cabinet%20Martin%2C%20les%20briefs%20cr%C3%A9atifs)&utm_medium=Social_Share", enabled: false },
+    button2: { text: "Voir plus", url: "https://cdn.dribbble.com/userupload/17846508/file/original-b30427359f65f92c03b0e6de8328bcc3.webp?resize=2048x5760&vertical=center", enabled: true },
+    category: "Webdesign",
     technologies: [
-      {text: 'HTML', icon: 'IconBrandHtml5'},
-      {text: 'CSS', icon: 'IconBrandCss3'}
+      {text: 'Figma', icon: 'IconBrandFigma'}
     ],
   },
   {
     id: 5,
-    title: "Projet music-dashboard",
-    subtitle: "Ce projet est parmis nos premiers projets de webdesign, nous avions une wireframe d'un dashboard de musique, auquel nous devions y mettre du contenu, couleurs, boutons, sections",
-    imageUrl: "/images/Music-Dashboard.webp",
-    projectButton: { url: "https://github.com/mdorizon/foodies-landing-training", enabled: false },
-    button2: { text: "Voir plus", url: "https://www.figma.com/file/GCi5kWl7xqoKg1MYabVTyA/Music-Dashboard?type=design&node-id=1%3A5&mode=design&t=7rmP4YdIuGvJDsTw-1", enabled: true },
-    category: "WebDesign",
+    title: "Premier Projet d'entrainement à NestJS",
+    subtitle: "Ce projet est un premier entrainement à l'utilisation de NestJS il n'y a que l'API, Vous pouvez la tester si vous le souhaitez",
+    imageUrl: "/images/nestjs.webp",
+    projectButton: { url: "https://github.com/mdorizon/ESD-NestJS-Training", enabled: true },
+    button2: { text: "Voir plus", url: "", enabled: false },
+    category: "Back-End",
     technologies: [
-      {text: 'Figma', icon: 'IconBrandFigma'},
-      {text: 'CSS', icon: 'IconBrandCss3'}
+      {text: 'NestJS', icon: 'IconApi'}
     ],
   },
   {
     id: 6,
-    title: "Projet forum PHP",
-    subtitle: "Projet de création d'un forum php en 1 heure, (n'ayant pas encore vu les base de données, les données du forum sont enregistrées dans un fichier json) et la création d'un nouveau post se fait sans compte, l'interface est crée avec bootstrap, le forum contient un système de upvote !",
-    imageUrl: "/images/forum-php.webp",
-    projectButton: { url: "https://github.com/mdorizon/foodies-landing-training", enabled: false },
-    button2: { text: "Voir plus", url: "https://github.com/mdorizon/forum-training", enabled: true },
-    category: "App PHP",
+    title: "Projet de groupe UX : Loc'Art",
+    subtitle: "",
+    imageUrl: "/images/locart.webp",
+    projectButton: { url: "", enabled: false },
+    button2: { text: "Voir plus", url: "", enabled: true },
+    category: "Webdesign",
     technologies: [
-      {text: 'PHP', icon: 'IconBrandPhp'},
+      {text: 'Figma', icon: 'IconBrandFigma'}
+    ],
+  },
+  {
+    id: 7,
+    title: "Projet Auth Blog",
+    subtitle: "Ce projet est une API Express avec authentification par token JWT, utilisant PostgreSQL pour la gestion des utilisateurs et des articles. Il permet de créer, lire, mettre à jour et supprimer des utilisateurs et des articles. L'authentification est gérée via un système de token JWT pour sécuriser les routes.",
+    imageUrl: "/images/authblog.webp",
+    projectButton: { url: "https://github.com/mdorizon/ESD-auth-blog", enabled: true },
+    button2: { text: "Voir plus", url: "", enabled: false },
+    category: "Back-End",
+    technologies: [
+      {text: 'Express', icon: 'IconApi'}
+    ],
+  },
+  {
+    id: 8,
+    title: "Projet Blog Prismic",
+    subtitle: "Ce projet est un blog simple utilisant Prismic pour gérer le contenu. Il permet de créer, modifier, publier et organiser des articles, une Landing Page et un menu.",
+    imageUrl: "/images/prismicblog.webp",
+    projectButton: { url: "https://github.com/mdorizon/esd-prismic-blog", enabled: true },
+    button2: { text: "Voir plus", url: "", enabled: false },
+    category: "Back-End",
+    technologies: [
+      {text: 'Prismic', icon: 'IconLayoutNavbarFilled'}
     ],
   },
 ];
-// IconBrandHtml5 IconBrandSass IconBrandCss3 IconBrandFigma IconBrandPhp IconBrandNextjs IconBrandAngular
+// IconBrandHtml5 IconLayoutNavbarFilled IconBrandSass IconBrandCss3 IconBrandFigma IconBrandPhp IconBrandNextjs IconBrandAngular IconApi
 
 const postsCategories: PostCategory[] = [
-  {id: 1, slug: "all", text: "tout les projets"},
-  {id: 2, slug: "intégration", text: "intégration"},
-  {id: 3, slug: "webdesign", text: "webdesign"},
-  {id: 4, slug: "app php", text: "app PHP"}
+  {id: 1, slug: "all", text: "Tous les projets"},
+  {id: 2, slug: "Front-End", text: "Front-End"},
+  {id: 3, slug: "Back-End", text: "Back-End"},
+  {id: 4, slug: "Webdesign", text: "Webdesign"},
 ]
 
 const Projects: React.FC = () => {
