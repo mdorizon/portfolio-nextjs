@@ -10,10 +10,10 @@ const postsData: PostData[] = [
   {
     id: 1,
     title: "Projet création d'une maquette pour le portfolio",
-    subtitle: "Création de la maquette du portfolio, design crée de 0, avec des inspirations prises sur dribbble, (les inspirations utilisées pour la création sont visibles sur le figma).",
+    subtitle: "Création de la maquette du portfolio, design crée de 0, il s'agit du site où vous êtes actuellement.",
     imageUrl: "/images/portfolio.webp",
     projectButton: { url: "/lien1", enabled: false },
-    button2: { text: "Voir plus", url: "https://www.figma.com/file/lpv75N1hQSnSzSeKmcYD6R/portfolio?type=design&node-id=0%3A1&mode=design&t=v1oQIgQMFrVDR33X-1", enabled: true },
+    button2: { text: "Voir plus", url: "https://www.figma.com/file/lpv75N1hQSnSzSeKmcYD6R/portfolio?type=design&node-id=0%3A1&mode=design&t=v1oQIgQMFrVDR33X-1", enabled: false },
     category: "Webdesign",
     technologies: [
       {text: 'Figma', icon: 'IconBrandFigma'}
@@ -72,10 +72,10 @@ const postsData: PostData[] = [
   {
     id: 6,
     title: "Projet de groupe UX : Loc'Art",
-    subtitle: "",
+    subtitle: "Dans le cadre du projet Loc’Art, nous avons mené une veille concurrentielle approfondie sur le marché de la location de vêtements haut de gamme afin d’identifier les axes de différenciation possibles. Nous avons ensuite élaboré des personas UX pour mieux comprendre les besoins et attentes des utilisateurs cibles. Enfin, nous avons synthétisé nos analyses sous forme de tableaux comparatifs et de diagrammes Kiviat pour orienter les choix stratégiques du projet.",
     imageUrl: "/images/locart.webp",
-    projectButton: { url: "", enabled: false },
-    button2: { text: "Voir plus", url: "", enabled: true },
+    projectButton: { url: "https://mdorizon.fr/documents/Projet_locart.zip", enabled: true },
+    button2: { text: "Voir plus", url: "https://www.figma.com/design/SX6BM199DlIU3nOutGkn4V/Loc-Art?node-id=0-1&t=OtzSWhwpGHoyUjS9-1", enabled: true },
     category: "Webdesign",
     technologies: [
       {text: 'Figma', icon: 'IconBrandFigma'}
